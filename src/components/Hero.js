@@ -1,4 +1,4 @@
-import { PlayCircle } from "lucide-react";
+import { Download } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -25,12 +25,6 @@ view lab reports, and stay connected with your healthcare providers—
 all in one secure platform.
       </p>
 
-      <div className="mt-6">
-       <button className="flex items-center gap-3 rounded-full bg-[#2F5E9F] px-8 py-4 font-semibold text-white hover:bg-[#264f87] transition">
-          <PlayCircle size={20} />
-          Watch Demo
-        </button>
-      </div>
 
     </div>
 

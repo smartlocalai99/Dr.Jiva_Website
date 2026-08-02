@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Header() {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -12,9 +12,9 @@ export default function Header() {
           {/* Logo */}
          <Link href="/">
   <img
-    src="/Logo.png"
+    src="Logo_dr.png"
     alt="Dr.Jiva"
-    className="h-14 w-auto"
+    className="h-18 w-auto"
   />
 </Link>
 

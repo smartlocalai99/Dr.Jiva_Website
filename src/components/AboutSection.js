@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const points = [
   "Smart medicine reminders",
+  "Online medicine ordering",
   "Secure digital medical records",
-  "Easy appointment management",
   "Connected healthcare ecosystem",
 ];
 
@@ -79,9 +79,9 @@ export default function AboutUs() {
                 delay: .3,
               }}
               viewport={{ once: true }}
-              className="inline-flex rounded-full bg-[#F8FAFC] px-5 py-2 text-2xl font-bold text-[#2F5E9F]"
+              className="inline-flex rounded-full bg-[#2F5E9F]/10 px-5 py-2 text-sm font-semibold text-[#2F5E9F]"
             >
-              ABOUT US
+              About  DR.Jiva
             </motion.span>
 
             <motion.h2
@@ -123,8 +123,9 @@ export default function AboutUs() {
               className="mt-8 text-lg leading-8 text-slate-600"
             >
               Dr. Jiva is a modern digital healthcare platform developed by
-              <strong> SMARTLOCAL AI</strong> to simplify healthcare
-              management for patients and healthcare providers.
+<strong> SMARTLOCAL AI</strong> to simplify healthcare
+management through medicine reminders, medicine ordering,
+digital prescriptions, and secure medical records.
             </motion.p>
 
             <motion.p
@@ -143,9 +144,10 @@ export default function AboutUs() {
               className="mt-6 text-lg leading-8 text-slate-600"
             >
               Our goal is to provide a smarter healthcare experience
-              through digital records, medicine reminders,
-              appointments, and secure access to medical information
-              anytime, anywhere.
+through medicine reminders, online medicine ordering,
+digital prescriptions, secure medical records,
+and easy access to healthcare information anytime,
+anywhere.
             </motion.p>
 
             <div className="mt-10 space-y-5">

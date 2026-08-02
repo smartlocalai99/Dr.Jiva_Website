@@ -2,120 +2,150 @@ import {
   Bell,
   FileText,
   Files,
-  CalendarDays,
   ShieldCheck,
   Hospital,
+  ArrowRight,
+  ShoppingBag,
 } from "lucide-react";
-
 const features = [
   {
     icon: Bell,
     title: "Smart Medicine Reminders",
     description:
-      "Receive timely medicine reminders with daily streaks to help you stay consistent.",
+      "Receive timely medicine reminders and stay consistent with your daily medication routine.",
   },
+
+  {
+    icon: ShoppingBag,
+    title: "Order Medicines Online",
+    description:
+      "Order your prescribed medicines from partnered pharmacies and get them delivered to your doorstep.",
+  },
+
   {
     icon: FileText,
     title: "Digital Prescriptions",
     description:
-      "Access doctor prescriptions securely anytime without carrying paper copies.",
+      "Access and manage your doctor prescriptions securely without carrying paper copies.",
   },
+
   {
     icon: Files,
     title: "Medical Records",
     description:
-      "Store laboratory reports, discharge summaries, and healthcare documents securely.",
+      "Store laboratory reports, discharge summaries, and important healthcare documents in one place.",
   },
-  {
-    icon: CalendarDays,
-    title: "Appointment Management",
-    description:
-      "View upcoming appointments and receive reminders so you never miss a visit.",
-  },
+
   {
     icon: Hospital,
     title: "Hospital Connectivity",
     description:
-      "Stay connected with partnered hospitals and access updated healthcare information.",
+      "Stay connected with partnered hospitals and access healthcare information easily.",
   },
+
   {
     icon: ShieldCheck,
     title: "Privacy & Security",
     description:
-      "Your health records are securely stored with strong privacy and data protection.",
+      "Your healthcare information is securely managed with advanced privacy and data protection.",
   },
-];
 
+];
 export default function Features() {
   return (
     <section
       id="features"
-      className="py-24 bg-[#F8FAFC] to-slate-50"
+      className="overflow-hidden bg-[#F8FAFC] py-24 lg:py-28"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Heading */}
-
-        <div className="text-center max-w-3xl mx-auto">
-
-          <span className="-mt-20 inline-flex rounded-full bg-[#2F5E9F]/10 px-5 py-2 text-sm font-semibold text-[#2F5E9F]">
+        <div className="max-w-3xl">
+          <span className="inline-flex rounded-full bg-[#2F5E9F]/10 px-5 py-2 text-sm font-semibold text-[#2F5E9F]">
             FEATURES
           </span>
-
-          <h2 className="mt-6 text-4xl lg:text-5xl font-black text-slate-900">
+          <h2 className="mt-6 text-4xl font-black leading-tight text-slate-900 lg:text-5xl">
             Everything You Need
             <span className="block text-[#2F5E9F]">
               For Better Healthcare
             </span>
           </h2>
-
-          <p className="mt-6 text-lg text-slate-600 leading-8">
-            Dr. Jiva combines medicine reminders, digital records,
-            appointments, and secure healthcare services into one
-            intelligent mobile platform.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            Dr. Jiva combines medicine reminders, online medicine ordering,
+  digital prescriptions, medical records, and secure healthcare
+  services into one intelligent healthcare platform.
           </p>
-
         </div>
-
-        {/* Cards */}
-
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
+        {/* Feature Cards */}
+       <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => {
             const Icon = feature.icon;
-
+            {/* First card blue */}
+            const isFeatured = index === 0;
             return (
-              <div
-                key={index}
-                className="group rounded-3xl bg-white border border-gray-100 p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+              <article
+                key={feature.title}
+className={`group flex min-h-[255px] flex-col rounded-[22px] border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                  isFeatured
+                    ? "border-[#2F5E9F] bg-[#2F5E9F]"
+                    : "border-slate-200 bg-white"
+                }`}
               >
-
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#2F5E9F]/10 group-hover:bg-[#2F5E9F] transition">
-
+                {/* Icon */}
+                <div
+                 className={`flex h-[48px] w-[48px] items-center justify-center rounded-2xl transition-all duration-300 ${
+                    isFeatured
+                      ? "bg-white text-[#2F5E9F]"
+                      : "bg-[#2F5E9F]/10 text-[#2F5E9F] group-hover:bg-[#2F5E9F] group-hover:text-white"
+                  }`}
+                >
                   <Icon
-                    size={30}
-                    className="text-[#2F5E9F] group-hover:text-white"
+                    size={22}
+                    strokeWidth={1.8}
                   />
-
                 </div>
-
-                <h3 className="mt-8 text-2xl font-bold text-slate-900">
+                {/* Title */}
+                <h3
+                  className={`mt-6 text-xl font-bold leading-7 ${
+                    isFeatured
+                      ? "text-white"
+                      : "text-slate-900"
+                  }`}
+                >
                   {feature.title}
                 </h3>
+                {/* Description */}
+                <p
+                  className={`mt-3 text-sm leading-6 ${
+                    isFeatured
+                      ? "text-blue-100"
+                      : "text-slate-600"
 
-                <p className="mt-4 text-slate-600 leading-8">
+                  }`}
+                >
                   {feature.description}
                 </p>
-
-              </div>
+                {/* Learn More */}
+                <a
+                  href="#contact"
+                 className={`mt-auto inline-flex items-center gap-2 pt-5 text-sm font-bold transition ${
+                  isFeatured
+                      ? "text-white hover:text-blue-100"
+                      : "text-[#2F5E9F] hover:text-[#244B80]"
+                  }`}
+                >
+                  Learn More
+                  <ArrowRight
+                    size={18}
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </a>
+              </article>
             );
           })}
-
         </div>
-
       </div>
     </section>
   );
+
 }
-
-

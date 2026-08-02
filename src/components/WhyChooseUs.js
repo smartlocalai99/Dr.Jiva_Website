@@ -1,3 +1,4 @@
+
 import {
   ShieldCheck,
   HeartPulse,
@@ -10,7 +11,7 @@ const reasons = [
     icon: HeartPulse,
     title: "Complete Healthcare in One App",
     description:
-      "Manage medicines, prescriptions, appointments, and medical records from one secure platform.",
+      "Manage medicines, order medicines online, prescriptions, and medical records from one secure platform.",
     stat: "All-in-One",
   },
   {
@@ -31,7 +32,7 @@ const reasons = [
     icon: Smartphone,
     title: "Access Anywhere",
     description:
-      "View your health information anytime from your smartphone wherever you are.",
+      "View your health records, prescriptions, and order medicines anytime from your smartphone.",
     stat: "Anytime",
   },
 ];
@@ -40,7 +41,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why"
-      className="bg-white py-28 overflow-hidden"
+      className="bg-white py-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -60,15 +61,16 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Dr. Jiva simplifies healthcare with intelligent technology,
-            secure digital records, and a connected healthcare experience.
+            Dr. Jiva simplifies healthcare with medicine reminders,
+  online medicine ordering, secure digital records, and a
+  connected healthcare experience.
           </p>
 
         </div>
 
         {/* Cards */}
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
 
           {reasons.map((item, index) => {
             const Icon = item.icon;
@@ -76,21 +78,21 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={index}
-                className="group rounded-3xl border border-slate-100 bg-[#F8FAFC] p-8 transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl"
+                className="group rounded-2xl border border-slate-100 bg-[#F8FAFC] p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
 
                 {/* Stat */}
 
-                <div className="text-right text-3xl font-black text-[#2F5E9F]/15">
+                <div className="text-right text-2xl font-black text-[#2F5E9F]/15">
                   {item.stat}
                 </div>
 
                 {/* Icon */}
 
-                <div className="mt-2 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#2F5E9F]/10 transition group-hover:bg-[#2F5E9F]">
+                <div className="mt-2 flex h-12 w-12 items-center justify-center rounded-xl bg-[#2F5E9F]/10 transition group-hover:bg-[#2F5E9F]">
 
                   <Icon
-                    size={30}
+                    size={24}
                     className="text-[#2F5E9F] group-hover:text-white"
                   />
 
@@ -98,13 +100,13 @@ export default function WhyChooseUs() {
 
                 {/* Title */}
 
-                <h3 className="mt-8 text-2xl font-bold text-slate-900">
+                <h3 className="mt-5 text-xl font-bold text-slate-900">
                   {item.title}
                 </h3>
 
                 {/* Description */}
 
-                <p className="mt-4 leading-8 text-slate-600">
+                <p className="mt-3 text-sm leading-6 text-slate-600">
                   {item.description}
                 </p>
 
@@ -116,42 +118,42 @@ export default function WhyChooseUs() {
 
         {/* Bottom Stats */}
 
-        <div className="mt-16 rounded-[32px] bg-[#2F5E9F] px-10 py-4">
+        <div className="mt-14 rounded-3xl bg-[#2F5E9F] px-8 py-8">
 
-          <div className="grid gap-10 text-center md:grid-cols-4">
+          <div className="grid gap-8 text-center md:grid-cols-4">
 
             <div>
-              <h3 className="text-4xl font-black text-white">
+              <h3 className="text-3xl font-black text-white">
                 10K+
               </h3>
-              <p className="mt-2 text-blue-100">
+              <p className="mt-2 text-sm text-blue-100">
                 Active Users
               </p>
             </div>
 
             <div>
-              <h3 className="text-4xl font-black text-white">
+              <h3 className="text-3xl font-black text-white">
                 4.9★
               </h3>
-              <p className="mt-2 text-blue-100">
+              <p className="mt-2 text-sm text-blue-100">
                 User Rating
               </p>
             </div>
 
             <div>
-              <h3 className="text-4xl font-black text-white">
+              <h3 className="text-3xl font-black text-white">
                 99%
               </h3>
-              <p className="mt-2 text-blue-100">
+              <p className="mt-2 text-sm text-blue-100">
                 Reminder Accuracy
               </p>
             </div>
 
             <div>
-              <h3 className="text-4xl font-black text-white">
+              <h3 className="text-3xl font-black text-white">
                 24/7
               </h3>
-              <p className="mt-2 text-blue-100">
+              <p className="mt-2 text-sm text-blue-100">
                 Secure Access
               </p>
             </div>
