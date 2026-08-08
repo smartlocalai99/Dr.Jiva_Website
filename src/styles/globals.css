@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", monospace;
+
+  --color-ink: #14224a;
+  --color-ink-soft: #223a75;
+  --color-sky: #2f7fdb;
+  --color-paper: #f6f9fc;
+  --color-paper-soft: #e9f1fb;
+  --color-charcoal: #29303d;
+  --color-line: #d8e4f3;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: var(--color-paper);
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+.font-eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: 0.16em;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
