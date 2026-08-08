@@ -1,6 +1,6 @@
 export default function GovernmentPartners() {
   return (
-    <section className="border-t border-line bg-paper py-16">
+    <section className="border-t border-line bg-white py-16">
       <div className="mx-auto px-6">
         {/* Heading */}
         <div className="mb-12 text-center">
@@ -18,7 +18,7 @@ export default function GovernmentPartners() {
 
         {/* Scrollable Logos */}
         <div className="overflow-x-auto scrollbar-hide">
-          <div className="flex min-w-max items-center justify-between gap-12 px-2 grayscale">
+          <div className="flex min-w-max items-center justify-between gap-12 px-2">
             <img src="/nha.png" alt="National Health Authority" className="h-34 w-auto flex-shrink-0 object-contain" />
             <img src="/mohfw.png" alt="Ministry of Health & Family Welfare" className="h-16 w-auto flex-shrink-0 object-contain" />
             <img src="/meity.png" alt="Ministry of Electronics & Information Technology" className="h-36 w-auto flex-shrink-0 object-contain" />

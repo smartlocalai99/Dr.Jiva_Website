@@ -30,7 +30,7 @@ export default function DownloadApp() {
                   <img
                     src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                     alt="Get it on Google Play"
-                    className="h-[75px] w-[170px] object-fill"
+                    className="h-[58px] w-[170px] object-fill"
                   />
                 </a>
 
@@ -38,7 +38,7 @@ export default function DownloadApp() {
                   <img
                     src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                     alt="Download on the App Store"
-                    className="h-[58px] w-auto object-fill"
+                    className="h-[58px] w-[170px] object-fill"
                   />
                 </a>
               </div>

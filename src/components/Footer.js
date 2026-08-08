@@ -20,35 +20,6 @@ export default function Footer() {
               Making healthcare simpler, smarter, and more connected
               through secure digital technology.
             </p>
-
-            <div className="mt-6 flex items-center gap-3">
-              <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
-                <FaFacebookF size={17} />
-              </a>
-              <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
-                <FaInstagram size={19} />
-              </a>
-              <a href="#" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
-                <FaLinkedinIn size={17} />
-              </a>
-            </div>
-
-            <div className="mt-5 flex flex-wrap items-center gap-3">
-              <a href="#" aria-label="Download Dr. Jiva from Google Play" className="flex h-[58px] w-[190px] items-center justify-center">
-                <img
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                  alt="Get it on Google Play"
-                  className="h-[58px] w-[190px] object-fill"
-                />
-              </a>
-              <a href="#" aria-label="Download Dr. Jiva from the App Store" className="flex h-[58px] w-[190px] items-center justify-center">
-                <img
-                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                  alt="Download on the App Store"
-                  className="h-[58px] w-[190px] object-fill"
-                />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -97,8 +68,42 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Download & Follow */}
+      <div className=" ">
+        <div className="mx-auto flex flex-col items-center gap-6 px-6 py-8 lg:flex-row lg:justify-between lg:px-8">
+          <div className="flex items-center gap-3">
+            <a href="#" aria-label="Download Dr. Jiva from Google Play" className="flex h-[58px] w-[170px] items-center justify-center">
+              <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+                className="h-[58px] w-[170px] object-fill"
+              />
+            </a>
+            <a href="#" aria-label="Download Dr. Jiva from the App Store" className="flex h-[58px] w-[170px] items-center justify-center">
+              <img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                className="h-[58px] w-[170px] object-fill"
+              />
+            </a>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
+              <FaFacebookF size={17} />
+            </a>
+            <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
+              <FaInstagram size={19} />
+            </a>
+            <a href="#" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
+              <FaLinkedinIn size={17} />
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Bottom Footer */}
-      <div className="border-t border-paper/10">
+      <div className="">
         <div className="mx-auto flex flex-col gap-5 px-6 py-7 text-sm text-paper/60 md:flex-row md:items-center md:justify-between lg:px-8">
           <p>© {new Date().getFullYear()} Dr. Jiva. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-6">

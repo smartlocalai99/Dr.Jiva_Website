@@ -12,7 +12,7 @@ export default function AboutUs() {
         {/* CENTER HEADER */}
         <div className="mx-auto max-w-4xl text-center mb-16">
           <h2 className="text-3xl font-light leading-relaxed text-gray-400 lg:text-5xl font-display">
-            We're{" "}
+We&apos;re{" "}
             <span className="font-semibold text-ink">revolutionizing healthcare</span>
             <span className="inline-flex align-middle items-center justify-center px-3 py-1 rounded-full bg-sky/10 border border-sky/20 text-sky text-xs font-semibold mx-2">
               <Link2 size={13} className="rotate-45" />

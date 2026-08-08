@@ -2,7 +2,7 @@ import { Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-x-hidden bg-white pt-12 pb-24 lg:pt-16 lg:pb-32 border-b border-line">
+    <section id="home" className="relative overflow-x-hidden bg-white pt-12 pb-24 lg:pt-16 lg:pb-32 border-b border-line">
       {/* Background soft brand gradient glows - matching the screenshot's layout but with brand colors */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         {/* Top-left soft sky blue glow */}

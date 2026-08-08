@@ -3,8 +3,9 @@ import { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const links = [
-  { href: "#", label: "Home" },
+  { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#why", label: "Why Us" },
   { href: "#features", label: "Features" },
   { href: "#how-it-works", label: "How It Works" },
   { href: "#contact", label: "Contact" },
