@@ -20,6 +20,23 @@ export default function Footer() {
               Making healthcare simpler, smarter, and more connected
               through secure digital technology.
             </p>
+
+            <div className="mt-6 flex items-center gap-3">
+              <a href="#" aria-label="Download Dr. Jiva from Google Play" className="flex h-[58px] w-[170px] items-center justify-center">
+                <img
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  alt="Get it on Google Play"
+                  className="h-[58px] w-[170px] object-fill"
+                />
+              </a>
+              <a href="#" aria-label="Download Dr. Jiva from the App Store" className="flex h-[58px] w-[170px] items-center justify-center">
+                <img
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  alt="Download on the App Store"
+                  className="h-[58px] w-[170px] object-fill"
+                />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -64,40 +81,21 @@ export default function Footer() {
                 +91 9876543210
               </a>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Download & Follow */}
-      <div className=" ">
-        <div className="mx-auto flex flex-col items-center gap-6 px-6 py-8 lg:flex-row lg:justify-between lg:px-8">
-          <div className="flex items-center gap-3">
-            <a href="#" aria-label="Download Dr. Jiva from Google Play" className="flex h-[58px] w-[170px] items-center justify-center">
-              <img
-                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                alt="Get it on Google Play"
-                className="h-[58px] w-[170px] object-fill"
-              />
-            </a>
-            <a href="#" aria-label="Download Dr. Jiva from the App Store" className="flex h-[58px] w-[170px] items-center justify-center">
-              <img
-                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                alt="Download on the App Store"
-                className="h-[58px] w-[170px] object-fill"
-              />
-            </a>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
-              <FaFacebookF size={17} />
-            </a>
-            <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
-              <FaInstagram size={19} />
-            </a>
-            <a href="#" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
-              <FaLinkedinIn size={17} />
-            </a>
+            <h3 className="font-eyebrow mt-8 text-xs font-semibold uppercase text-paper/50">
+              Connect With Us
+            </h3>
+            <div className="mt-5 flex items-center gap-3">
+              <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
+                <FaFacebookF size={17} />
+              </a>
+              <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
+                <FaInstagram size={19} />
+              </a>
+              <a href="#" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink">
+                <FaLinkedinIn size={17} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
