@@ -1,76 +1,106 @@
 export default function DownloadApp() {
   return (
-    <section id="download-app" className="overflow-hidden bg-paper py-14 lg:py-20">
-      <div className="mx-auto px-6 lg:px-8">
-        {/* Main Card */}
-        <div className="relative overflow-hidden rounded-[28px] border border-line bg-paper-soft">
-          <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-sky/10 blur-3xl" />
-          <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-ink/10 blur-3xl" />
+    <section className="px-6 py-12 sm:px-8 lg:px-10">
+      <div className="mx-auto ">
+        {/* Main Two-Panel Card */}
+        <div className="grid gap-4 lg:grid-cols-2">
 
-          <div className="relative grid items-center gap-14 px-8 py-10 lg:grid-cols-2 lg:px-16 lg:py-14">
-            {/* Left Content */}
-            <div>
-              <span className="font-eyebrow inline-block text-xs font-semibold uppercase text-sky">
-                Download the app
+          {/* Left Panel */}
+          <div className="flex min-h-[560px] flex-col justify-center rounded-[28px] bg-[#EEF5FB] px-8 py-12 sm:px-12 lg:px-16 lg:py-16">
+            <span className="font-eyebrow inline-block text-xs font-semibold uppercase tracking-[0.18em] text-sky">
+              Download the app
+            </span>
+
+            <h2 className="mt-5 max-w-xl text-4xl font-extrabold leading-[1.05] text-ink sm:text-5xl lg:text-[56px]">
+              Your healthcare,
+              <span className="block text-sky">
+                always with you
               </span>
+            </h2>
 
-              <h2 className="mt-5 text-4xl font-extrabold leading-tight text-ink sm:text-5xl">
-                Your healthcare,
-                <span className="block text-sky">always with you</span>
-              </h2>
+            <p className="mt-6 max-w-xl text-base leading-7 text-charcoal/75 sm:text-lg sm:leading-8">
+              Download the Dr. Jiva app to order medicines, manage your
+              prescriptions, track your medicines, and securely store
+              your medical records — all in one place.
+            </p>
 
-              <p className="mt-6 text-lg leading-8 text-charcoal/80">
-                Download the Dr. Jiva app to order medicines, manage your
-                prescriptions, track your medicines, and securely store
-                your medical records — all in one place.
-              </p>
+            {/* App Store Buttons */}
+            <div className="mt-8 flex flex-wrap items-center gap-4">
 
-              <div className="mt-6 flex flex-wrap items-center gap-4">
-                <a href="#" aria-label="Download Dr. Jiva from Google Play">
-                  <img
-                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                    alt="Get it on Google Play"
-                    className="h-[58px] w-[170px] object-fill"
-                  />
-                </a>
-
-                <a href="#" aria-label="Download Dr. Jiva from the App Store">
-                  <img
-                    src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                    alt="Download on the App Store"
-                    className="h-[58px] w-[170px] object-fill"
-                  />
-                </a>
-              </div>
-            </div>
-
-            {/* Right Side */}
-            <div className="relative flex items-center justify-center">
-              <div className="absolute h-[380px] w-[380px] rounded-full bg-sky/10 blur-3xl" />
-
-              <div className="relative">
+              <a
+                href="#"
+                aria-label="Download Dr. Jiva from Google Play"
+                className="flex h-[58px] w-[170px] items-center justify-center"
+              >
                 <img
-                  src="/mbl-img.png"
-                  alt="Dr. Jiva App"
-                  className="w-[250px]"
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  alt="Get it on Google Play"
+                  className="h-[59px] w-[170px]"
                 />
+              </a>
 
-                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center">
-                  <h3 className="text-[22px] font-bold leading-tight text-ink">
-                    Scan the QR Code
-                  </h3>
-                  <p className="mt-2 text-[20px] font-bold leading-tight text-sky">
-                    Download the App
-                  </p>
-                  <img
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=DrJiva"
-                    alt="QR Code"
-                    className="mt-8 h-[140px] w-[140px] rounded-lg border border-line"
-                  />
-                </div>
-              </div>
+              <a
+                href="#"
+                aria-label="Download Dr. Jiva from the App Store"
+                className="flex h-[58px] w-[170px] items-center justify-center"
+              >
+                <img
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  alt="Download on the App Store"
+                  className="h-[39px] w-[130px]"
+                />
+              </a>
+
             </div>
           </div>
+
+
+          {/* Right Panel */}
+{/* Right Panel */}
+<div className="relative flex min-h-[560px] items-center justify-center overflow-hidden rounded-[28px] bg-sky px-8 py-10 sm:px-12 lg:px-16">
+
+  {/* Decorative circles */}
+  <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-white/10" />
+  <div className="absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-white/10" />
+
+  {/* Content */}
+  <div className="relative z-10 flex h-full w-full flex-col items-center">
+
+    {/* Heading */}
+    <h3 className="text-center text-2xl font-bold leading-tight text-white sm:text-3xl">
+      Scan the QR Code
+    </h3>
+
+    <p className="mt-2 text-center text-lg font-bold text-white/90 sm:text-xl">
+      Download the App
+    </p>
+
+    {/* Hand + Phone */}
+    <div className="relative mt-4 flex flex-1 items-center justify-center">
+
+      <div className="relative translate-x-4 translate-y-10 h-[440px] w-auto sm:translate-x-5 sm:h-[465px] lg:translate-x-6 lg:h-[480px]">
+
+        {/* Hand holding phone */}
+        <img
+          src="/hand-phone.png"
+          alt="Dr. Jiva app"
+          className="h-full w-auto object-contain"
+        />
+
+        {/* QR Code positioned inside the phone's scanner frame */}
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=DrJiva"
+          alt="Dr. Jiva QR Code"
+          className="absolute left-[32%] top-[35%] z-20 h-[560px] w-[560px] rounded-md bg-white p-1 shadow-sm sm:h-[101px] sm:w-[101px]"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
         </div>
       </div>
     </section>

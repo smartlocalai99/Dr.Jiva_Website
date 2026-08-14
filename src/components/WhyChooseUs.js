@@ -33,47 +33,67 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why" className="overflow-hidden bg-paper py-20">
-      <div className="mx-auto px-6 lg:px-8">
-        {/* Heading */}
-        <div className="mx-auto text-center">
-          <span className="font-eyebrow inline-block text-xs font-semibold uppercase text-sky">
-            Why choose Dr. Jiva
-          </span>
+    <section>
+      <div className="mx-auto  px-6 py-20 lg:px-8">
 
-          <h2 className="mt-6 text-4xl font-extrabold text-ink lg:text-5xl">
-            Smarter healthcare,
-            <span className="block text-sky">better living</span>
-          </h2>
+        {/* Section Header */}
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-end">
+          
+          {/* Left */}
+          <div>
+            <p className="font-eyebrow text-sm font-semibold uppercase tracking-wider text-ink/60">
+              Why choose Dr. Jiva
+            </p>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-charcoal/80">
-            Dr. Jiva simplifies healthcare with medicine reminders, online
-            medicine ordering, secure digital records, and a connected
-            healthcare experience.
-          </p>
+            <h2 className="mt-5 text-4xl font-extrabold leading-tight text-ink lg:text-5xl">
+              Smarter healthcare,
+              <span className="block text-sky">better living</span>
+            </h2>
+          </div>
+
+          {/* Right */}
+          <div className="lg:pb-5">
+            <p className="text-50 leading-7 text-charcoal/80 lg:ml-auto lg:translate-x-80">
+              Dr. Jiva simplifies healthcare with medicine reminders,
+              <br />
+              online medicine ordering, secure digital records, 
+               <br />
+              and a connected healthcare experience.
+            </p>
+          </div>
         </div>
 
-        {/* Cards */}
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {/* Features */}
+        <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((item) => {
             const Icon = item.icon;
+
             return (
               <div
-                key={item.title}
-                className="rounded-2xl border border-line bg-paper-soft p-6"
-              >
-                <div className="font-eyebrow text-right text-xl font-semibold text-ink/15">
+  key={item.title}
+  className="group relative rounded-3xl border border-line bg-white p-7 transition-all duration-300 hover:border-sky/40 hover:shadow-lg"
+>
+
+                {/* Icon */}
+                <div className="flex h-10 w-10 items-center justify-start">
+                  <Icon
+                    size={29}
+                    strokeWidth={1.8}
+                    className="text-sky"
+                  />
+                </div>
+
+                {/* Stat */}
+                <div className="mt-5 font-eyebrow text-sm font-semibold text-ink/30">
                   {item.stat}
                 </div>
 
-                <div className="mt-2 flex h-12 w-12 items-center justify-center rounded-xl bg-sky/10">
-                  <Icon size={24} className="text-sky" />
-                </div>
-
-                <h3 className="mt-5 text-xl font-bold text-ink">
+                {/* Title */}
+                <h3 className="mt-2 text-lg font-bold leading-6 text-ink">
                   {item.title}
                 </h3>
 
+                {/* Description */}
                 <p className="mt-3 text-sm leading-6 text-charcoal/70">
                   {item.description}
                 </p>
@@ -83,34 +103,48 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-14 rounded-3xl bg-ink px-8 py-8">
+        <div className="mt-16 rounded-3xl bg-ink px-8 py-8">
           <div className="grid gap-8 text-center md:grid-cols-4">
+
             <div>
               <h3 className="font-eyebrow text-3xl font-semibold text-paper">
-                10K+
+                32+
               </h3>
-              <p className="mt-2 text-sm text-paper/70">Active Users</p>
+              <p className="mt-2 text-sm text-paper/70">
+                Hospitals
+              </p>
             </div>
+
             <div>
               <h3 className="font-eyebrow text-3xl font-semibold text-paper">
                 4.9★
               </h3>
-              <p className="mt-2 text-sm text-paper/70">User Rating</p>
+              <p className="mt-2 text-sm text-paper/70">
+                User Rating
+              </p>
             </div>
+
             <div>
               <h3 className="font-eyebrow text-3xl font-semibold text-paper">
-                99%
+                100%
               </h3>
-              <p className="mt-2 text-sm text-paper/70">Reminder Accuracy</p>
+              <p className="mt-2 text-sm text-paper/70">
+                Reminder Accuracy
+              </p>
             </div>
+
             <div>
               <h3 className="font-eyebrow text-3xl font-semibold text-paper">
                 24/7
               </h3>
-              <p className="mt-2 text-sm text-paper/70">Secure Access</p>
+              <p className="mt-2 text-sm text-paper/70">
+                Secure Access
+              </p>
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );

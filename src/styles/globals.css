@@ -42,3 +42,582 @@ h4 {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+/* =========================================
+   HOSPITAL LOGO CONTINUOUS TICKER
+========================================= */
+
+.hospital-ticker-wrapper {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: hospitalTicker 30s linear infinite;
+  will-change: transform;
+}
+
+.hospital-ticker-track {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.hospital-logo-item {
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  margin: 0 35px;
+}
+
+.hospital-logo-item img {
+  
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* EXACTLY LIKE YOUR LAWYER WEBSITE */
+
+@keyframes hospitalTicker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hospital-logo-item {
+    width: 160px;
+    height: 80px;
+    margin: 0 20px;
+  }
+
+  .hospital-ticker-wrapper {
+    animation-duration: 25s;
+  }
+}
+/* =========================================
+   INITIAL STATE
+   Everything stays close behind the phone
+   ========================================= */
+
+.hero-phone-group .card-1 {
+  transform: translateX(110px) translateY(70px) rotate(0deg) scale(0.82);
+  opacity: 0.35;
+}
+
+.hero-phone-group .card-2 {
+  transform: translateX(55px) translateY(35px) rotate(0deg) scale(0.88);
+  opacity: 0.55;
+}
+
+.hero-phone-group .card-3 {
+  transform: translateX(20px) translateY(15px) rotate(0deg) scale(0.94);
+}
+
+.hero-phone-group .card-5 {
+  transform: translateX(-20px) translateY(15px) rotate(0deg) scale(0.94);
+}
+
+.hero-phone-group .card-6 {
+  transform: translateX(-55px) translateY(35px) rotate(0deg) scale(0.88);
+  opacity: 0.55;
+}
+
+.hero-phone-group .card-7 {
+  transform: translateX(-110px) translateY(70px) rotate(0deg) scale(0.82);
+  opacity: 0.35;
+}
+
+
+/* =========================================
+   HOVER STATE
+   Cards fan OUT from the phone
+   ========================================= */
+
+.hero-phone-group:hover .card-1 {
+  transform: translateX(-270px) translateY(65px) rotate(-8deg) scale(1);
+  opacity: 0.45;
+}
+
+.hero-phone-group:hover .card-2 {
+  transform: translateX(-145px) translateY(30px) rotate(-4deg) scale(1);
+  opacity: 1;
+}
+
+.hero-phone-group:hover .card-3 {
+  transform: translateX(-55px) translateY(10px) rotate(-2deg) scale(1);
+}
+
+.hero-phone-group:hover .card-5 {
+  transform: translateX(55px) translateY(10px) rotate(2deg) scale(1);
+}
+
+.hero-phone-group:hover .card-6 {
+  transform: translateX(145px) translateY(30px) rotate(4deg) scale(1);
+  opacity: 1;
+}
+
+.hero-phone-group:hover .card-7 {
+  transform: translateX(270px) translateY(65px) rotate(8deg) scale(1);
+  opacity: 0.45;
+}
+
+
+/* =========================================
+   PHONE SLIGHTLY COMES FORWARD
+   ========================================= */
+
+.hero-phone-group:hover .main-phone {
+  transform: translateY(-5px) scale(1.015);
+
+  box-shadow:
+    0 35px 70px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   MOBILE
+   Keep cards closer on smaller screens
+   ========================================= */
+
+@media (max-width: 1023px) {
+  .hero-phone-group {
+    overflow: hidden;
+  }
+
+  .hero-phone-group:hover .card-3 {
+    transform: translateX(-25px) translateY(10px) rotate(-2deg);
+  }
+
+  .hero-phone-group:hover .card-5 {
+    transform: translateX(25px) translateY(10px) rotate(2deg);
+  }
+}
+
+/* =========================================
+   DR. JIVA HERO PHONE HOVER EFFECT
+   ========================================= */
+
+.hero-phone-group {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Phone stays above all cards */
+.hero-phone-group .main-phone {
+  position: relative;
+  z-index: 30;
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.7s ease;
+}
+
+/* All floating cards */
+.hero-phone-group .hero-card {
+  position: relative;
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.6s ease,
+    filter 0.6s ease;
+  will-change: transform, opacity;
+}
+
+/* =========================================
+   INITIAL STATE
+   Cards are hidden/tucked behind phone
+   ========================================= */
+
+.hero-phone-group .card-1 {
+  transform: translateX(110px) translateY(55px) rotate(-8deg) scale(0.82);
+  opacity: 0;
+  filter: blur(1px);
+}
+
+.hero-phone-group .card-2 {
+  transform: translateX(75px) translateY(35px) rotate(-4deg) scale(0.88);
+  opacity: 0;
+  filter: blur(1px);
+}
+
+.hero-phone-group .card-3 {
+  transform: translateX(45px) translateY(15px) rotate(-2deg) scale(0.94);
+  opacity: 0;
+  filter: blur(1px);
+}
+
+.hero-phone-group .card-5 {
+  transform: translateX(-45px) translateY(15px) rotate(2deg) scale(0.94);
+  opacity: 0;
+  filter: blur(1px);
+}
+
+.hero-phone-group .card-6 {
+  transform: translateX(-75px) translateY(35px) rotate(4deg) scale(0.88);
+  opacity: 0;
+  filter: blur(1px);
+}
+
+.hero-phone-group .card-7 {
+  transform: translateX(-110px) translateY(55px) rotate(8deg) scale(0.82);
+  opacity: 0;
+  filter: blur(1px);
+}
+
+
+/* =========================================
+   PHONE HOVER
+   ALL CARDS FAN OUT
+   ========================================= */
+
+/* Card 1 - Outer Left */
+.hero-phone-group:has(.main-phone:hover) .card-1 {
+  transform: translateX(-270px) translateY(65px) rotate(-8deg) scale(1);
+  opacity: 0.45;
+  filter: blur(0);
+}
+
+/* Card 2 - Mid Left */
+.hero-phone-group:has(.main-phone:hover) .card-2 {
+  transform: translateX(-145px) translateY(30px) rotate(-4deg) scale(1);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Card 3 - Inner Left - KEEP */
+.hero-phone-group:has(.main-phone:hover) .card-3 {
+  transform: translateX(-55px) translateY(10px) rotate(-2deg) scale(1);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Card 5 - Inner Right - KEEP */
+.hero-phone-group:has(.main-phone:hover) .card-5 {
+  transform: translateX(55px) translateY(10px) rotate(2deg) scale(1);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Card 6 - Mid Right */
+.hero-phone-group:has(.main-phone:hover) .card-6 {
+  transform: translateX(145px) translateY(30px) rotate(4deg) scale(1);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Card 7 - Outer Right */
+.hero-phone-group:has(.main-phone:hover) .card-7 {
+  transform: translateX(270px) translateY(65px) rotate(8deg) scale(1);
+  opacity: 0.45;
+  filter: blur(0);
+}
+
+
+/* =========================================
+   PHONE SLIGHTLY COMES FORWARD
+   ========================================= */
+
+.hero-phone-group:has(.main-phone:hover) .main-phone {
+  transform: translateY(-5px) scale(1.015);
+
+  box-shadow:
+    0 35px 70px rgba(20, 34, 74, 0.18),
+    0 10px 30px rgba(47, 127, 219, 0.10);
+}
+
+
+/* =========================================
+   MOBILE / TABLET
+   ========================================= */
+
+@media (max-width: 1023px) {
+
+  .hero-phone-group {
+    overflow: hidden;
+  }
+
+  /* Don't spread cards too far */
+  .hero-phone-group:has(.main-phone:hover) .card-3 {
+    transform: translateX(-25px) translateY(10px) rotate(-2deg);
+  }
+
+  .hero-phone-group:has(.main-phone:hover) .card-5 {
+    transform: translateX(25px) translateY(10px) rotate(2deg);
+  }
+}
+
+/* =========================================
+   HERO ORBIT ANIMATIONS
+========================================= */
+
+@keyframes heroOrbitClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heroOrbitCounterClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.orbit-clockwise {
+  animation: heroOrbitClockwise 24s linear infinite;
+}
+
+.orbit-counterclockwise {
+  animation: heroOrbitCounterClockwise 30s linear infinite;
+}
+/* ==================================================
+   DR. JIVA HERO ORBIT SYSTEM
+================================================== */
+
+  .orbit-ring {
+    transform-origin: center;
+  }
+
+
+/* -------------------------------
+   CLOCKWISE ORBITS
+-------------------------------- */
+
+.orbit-clockwise-1 {
+  animation: orbitClockwise1 20s linear infinite;
+}
+
+.orbit-clockwise-2 {
+  animation: orbitClockwise2 26s linear infinite;
+}
+
+.orbit-clockwise-3 {
+  animation: orbitClockwise3 32s linear infinite;
+}
+
+
+/* -------------------------------
+   ANTI-CLOCKWISE ORBITS
+-------------------------------- */
+
+.orbit-counter-1 {
+  animation: orbitCounter1 23s linear infinite;
+}
+
+.orbit-counter-2 {
+  animation: orbitCounter2 29s linear infinite;
+}
+
+
+/* ==================================================
+   ICON COUNTER ROTATION
+   Keeps icons upright while orbiting
+================================================== */
+
+.orbit-icon-counter-1 {
+  animation: iconCounter1 20s linear infinite;
+}
+
+.orbit-icon-counter-2 {
+  animation: iconCounter2 23s linear infinite;
+}
+
+.orbit-icon-counter-3 {
+  animation: iconCounter3 26s linear infinite;
+}
+
+.orbit-icon-counter-4 {
+  animation: iconCounter4 29s linear infinite;
+}
+
+.orbit-icon-counter-5 {
+  animation: iconCounter5 32s linear infinite;
+}
+
+
+/* ==================================================
+   KEYFRAMES
+================================================== */
+
+@keyframes orbitClockwise1 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitCounter1 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes orbitClockwise2 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitCounter2 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes orbitClockwise3 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ==================================================
+   KEEP ICONS UPRIGHT
+================================================== */
+
+@keyframes iconCounter1 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes iconCounter2 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes iconCounter3 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes iconCounter4 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes iconCounter5 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+/* =========================================
+   HERO STAR SOFT SPARKLE
+========================================= */
+
+.hero-star-sparkle {
+  animation: heroStarSpinSparkle 3.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes heroStarSpinSparkle {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 3px rgba(47, 127, 219, 0.25));
+  }
+
+  25% {
+    transform: rotate(90deg) scale(1.05);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 8px rgba(47, 127, 219, 0.45));
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.12);
+    opacity: 1;
+    filter: drop-shadow(0 0 16px rgba(47, 127, 219, 0.75));
+  }
+
+  75% {
+    transform: rotate(270deg) scale(1.05);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 8px rgba(47, 127, 219, 0.45));
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 3px rgba(47, 127, 219, 0.25));
+  }
+}
+/* =========================================
+   HERO PLAY ICON - SOFT PULSE
+========================================= */
+
+.hero-play-pulse {
+  animation: heroPlayPulse 2.5s ease-in-out infinite;
+  transform-origin: center;
+  filter: drop-shadow(0 0 4px rgba(47, 127, 219, 0.25));
+}
+
+@keyframes heroPlayPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(47, 127, 219, 0.25));
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.85;
+    filter: drop-shadow(0 0 12px rgba(47, 127, 219, 0.65));
+  }
+}

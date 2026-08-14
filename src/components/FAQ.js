@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp, MessageCircle } from "lucide-react";
+import { Plus, Minus, ArrowUpRight } from "lucide-react";
 
 const faqs = [
   {
@@ -41,97 +41,127 @@ export default function FAQ() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  return (
-    <section id="faq" className="relative overflow-hidden bg-paper py-20 lg:py-24">
-      <div className="mx-auto px-6 lg:px-8">
-        {/* Heading */}
-        <div className="mx-auto text-center">
-          <span className="font-eyebrow inline-block text-xs font-semibold uppercase text-sky">
-            FAQ
+  // Left side FAQs
+  const leftFaqs = faqs.filter((_, index) => index % 2 === 0);
+
+  // Right side FAQs
+  const rightFaqs = faqs.filter((_, index) => index % 2 !== 0);
+
+  const FAQItem = ({ faq, originalIndex }) => {
+    const isOpen = openIndex === originalIndex;
+
+    return (
+      <div className="overflow-hidden rounded-[20px] border border-gray-100 bg-white transition-all duration-300">
+        {/* Question */}
+        <button
+          type="button"
+          onClick={() => toggleFAQ(originalIndex)}
+          aria-expanded={isOpen}
+          className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left"
+        >
+          <span className="text-[15px] font-medium leading-6 text-ink sm:text-base">
+            {faq.question}
           </span>
-          <h2 className="mt-5 text-3xl font-extrabold leading-tight text-ink lg:text-4xl">
-            Frequently asked
-            <span className="block text-sky">questions</span>
+
+          {/* Plus / Minus */}
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink text-white">
+            {isOpen ? (
+              <Minus size={16} strokeWidth={2.5} />
+            ) : (
+              <Plus size={16} strokeWidth={2.5} />
+            )}
+          </span>
+        </button>
+
+        {/* Answer */}
+        {isOpen && (
+          <div className="px-5 pb-5">
+            <p className="text-sm leading-6 text-charcoal/65">
+              {faq.answer}
+            </p>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <section className="bg-paper py-20 lg:py-24">
+      <div className="w-full px-6 lg:px-8">
+
+        {/* FAQ Heading */}
+        <div className="mx-auto max-w-3xl text-center">
+
+          {/* Small Label */}
+          <div className="flex items-center justify-center gap-2">
+            <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
+
+            <span className="text-sm font-medium text-charcoal">
+              FAQs
+            </span>
+          </div>
+
+          {/* Main Heading */}
+          <h2 className="mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+            Frequently asked questions
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-charcoal/80">
+
+          {/* Description */}
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-charcoal/65 sm:text-base">
             Find answers to common questions about Dr. Jiva and how our
             digital healthcare platform helps you manage your health.
           </p>
+
         </div>
 
-        {/* FAQ Content */}
-        <div className="mx-auto mt-12 grid gap-7 lg:grid-cols-[0.75fr_1.35fr]">
-          {/* Left Support Card */}
-          <div className="h-fit rounded-[25px] bg-ink p-6 text-paper">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-paper/15">
-              <MessageCircle size={23} />
-            </div>
+        {/* FAQ TWO INDEPENDENT COLUMNS */}
+        <div className="mx-auto mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
 
-            <h3 className="mt-6 text-2xl font-extrabold leading-tight">
-              Still have
-              <span className="block">questions?</span>
-            </h3>
-
-            <p className="mt-4 text-sm leading-6 text-paper/70">
-              Our team is here to help you understand Dr. Jiva and get the
-              support you need.
-            </p>
-
-            <a
-              href="#contact"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-paper px-5 py-2.5 text-sm font-semibold text-ink"
-            >
-              Contact Us
-              <MessageCircle size={16} />
-            </a>
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col gap-5 self-start">
+            {leftFaqs.map((faq, index) => (
+              <FAQItem
+                key={index}
+                faq={faq}
+                originalIndex={index * 2}
+              />
+            ))}
           </div>
 
-          {/* Right FAQ Question Cards */}
-          <div className="mx-auto w-full space-y-3">
-            {faqs.map((faq, index) => {
-              const isOpen = openIndex === index;
-              return (
-                <div
-                  key={index}
-                  className={`overflow-hidden rounded-xl border ${
-                    isOpen
-                      ? "border-sky/30 bg-paper"
-                      : "border-line bg-paper-soft"
-                  }`}
-                >
-                  <button
-                    type="button"
-                    onClick={() => toggleFAQ(index)}
-                    aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
-                  >
-                    <span
-                      className={`text-[15px] font-bold leading-6 ${
-                        isOpen ? "text-sky" : "text-ink"
-                      }`}
-                    >
-                      {faq.question}
-                    </span>
-
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sky">
-                      {isOpen ? (
-                        <ChevronUp size={25} strokeWidth={3} />
-                      ) : (
-                        <ChevronDown size={25} strokeWidth={3} />
-                      )}
-                    </span>
-                  </button>
-
-                  {isOpen && (
-                    <p className="px-5 pb-5 text-sm leading-6 text-charcoal/70">
-                      {faq.answer}
-                    </p>
-                  )}
-                </div>
-              );
-            })}
+          {/* RIGHT COLUMN */}
+          <div className="flex flex-col gap-5 self-start">
+            {rightFaqs.map((faq, index) => (
+              <FAQItem
+                key={index}
+                faq={faq}
+                originalIndex={index * 2 + 1}
+              />
+            ))}
           </div>
+
         </div>
+
+        {/* Still Have Questions CTA */}
+        <div className="mt-14 text-center">
+
+          <h3 className="text-xl font-bold text-ink sm:text-2xl">
+            Still have questions?
+          </h3>
+
+          <p className="mt-2 text-sm text-charcoal/65">
+            Our team is here to help you with any questions about Dr. Jiva.
+          </p>
+
+          <a
+            href="#contact"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-sky"
+          >
+            Contact Us
+            <ArrowUpRight size={17} />
+          </a>
+
+        </div>
+
       </div>
     </section>
   );

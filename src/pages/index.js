@@ -22,8 +22,10 @@ export default function Home() {
        <HowItWorks />
        <DownloadApp />
        <FAQ />
-       <ContactUs />
        <GovernmentPartners />
+       <ContactUs />
+       
+  
       </main>
         <Footer />
     
