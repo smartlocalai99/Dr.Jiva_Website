@@ -12,7 +12,7 @@ import Image from "next/image";
 export default function Hero() {
   const hospitals = [
     {
-      src: "/asian (2).png",
+      src: "/asian.png",
       alt: "Asian Hospital",
     },
     {
@@ -20,7 +20,7 @@ export default function Hero() {
       alt: "Holistics Hospital",
     },
     {
-      src: "/prime.png",
+      src: "/Prime.png",
       alt: "Prime Hospital",
     },
     {
