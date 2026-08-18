@@ -92,14 +92,20 @@ export default function DownloadApp() {
           className="h-full w-auto object-contain"
         />
 
-        {/* Local QR asset keeps the scanner code visible on every screen size. */}
+        {/* Covers the decorative scanner baked into the phone artwork. */}
+        <div
+          aria-hidden="true"
+          className="absolute left-[30%] top-[35%] z-10 aspect-square w-[24%] rounded-md bg-white"
+        />
+
+        {/* Local QR asset remains the only visible scanner code. */}
         <Image
           src="/dr-jiva-qr.svg"
           alt="Dr. Jiva QR Code"
           width={200}
           height={200}
           unoptimized
-          className="absolute left-[32%] top-[35%] z-20 h-auto w-[22%] rounded-sm bg-white p-1 shadow-sm"
+          className="absolute left-[32%] top-[37%] z-20 h-auto w-[20%] rounded-sm bg-white p-1 shadow-sm"
         />
 
       </div>
