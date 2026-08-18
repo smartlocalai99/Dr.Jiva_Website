@@ -22,6 +22,18 @@ body {
   font-family: var(--font-body);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+body { min-width: 320px; }
+img, svg { max-width: 100%; }
+section[id] { scroll-margin-top: 5.5rem; }
+:focus-visible { outline: 3px solid var(--color-sky); outline-offset: 3px; }
+
 h1,
 h2,
 h3,
@@ -619,5 +631,47 @@ h4 {
     transform: scale(1.1);
     opacity: 0.85;
     filter: drop-shadow(0 0 12px rgba(47, 127, 219, 0.65));
+  }
+}
+
+.hero-heart-pulse {
+  animation: heartbeatPulse 1.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes heartbeatPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.12);
+  }
+
+  30% {
+    transform: scale(0.96);
+  }
+
+  45% {
+    transform: scale(1.08);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 639px) {
+  .hero-phone-group { min-height: 510px; }
+  .hero-phone-group .main-phone { width: min(68vw, 235px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

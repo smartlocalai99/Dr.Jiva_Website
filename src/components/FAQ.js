@@ -64,7 +64,7 @@ export default function FAQ() {
           </span>
 
           {/* Plus / Minus */}
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink text-white">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink text-white">
             {isOpen ? (
               <Minus size={16} strokeWidth={2.5} />
             ) : (
@@ -138,27 +138,6 @@ export default function FAQ() {
               />
             ))}
           </div>
-
-        </div>
-
-        {/* Still Have Questions CTA */}
-        <div className="mt-14 text-center">
-
-          <h3 className="text-xl font-bold text-ink sm:text-2xl">
-            Still have questions?
-          </h3>
-
-          <p className="mt-2 text-sm text-charcoal/65">
-            Our team is here to help you with any questions about Dr. Jiva.
-          </p>
-
-          <a
-            href="#contact"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-sky"
-          >
-            Contact Us
-            <ArrowUpRight size={17} />
-          </a>
 
         </div>
 

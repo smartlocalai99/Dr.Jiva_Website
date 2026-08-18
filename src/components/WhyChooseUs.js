@@ -53,12 +53,10 @@ export default function WhyChooseUs() {
 
           {/* Right */}
           <div className="lg:pb-5">
-            <p className="text-50 leading-7 text-charcoal/80 lg:ml-auto lg:translate-x-80">
+            <p className="max-w-xl text-base leading-7 text-charcoal/80 lg:ml-auto">
               Dr. Jiva simplifies healthcare with medicine reminders,
-              <br />
               online medicine ordering, secure digital records, 
-               <br />
-              and a connected healthcare experience.
+               and a connected healthcare experience.
             </p>
           </div>
         </div>

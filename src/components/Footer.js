@@ -21,7 +21,7 @@ export default function Footer() {
               through secure digital technology.
             </p>
 
-            <div className="mt-6 flex items-center gap-0">
+            <div className="mt-6 flex flex-wrap items-center gap-2">
               <a href="#" aria-label="Download Dr. Jiva from Google Play" className="flex h-[58px] w-[170px] items-center justify-center">
                 <img
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"

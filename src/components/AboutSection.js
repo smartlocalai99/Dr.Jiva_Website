@@ -71,7 +71,7 @@ export default function AboutUs() {
         <div className="flex flex-wrap items-center justify-center gap-6 lg:flex-nowrap">
 
           {/* CARD 1 */}
-          <div className="flex h-[380px] w-[290px] shrink-0 flex-col rounded-[2rem] border border-line bg-paper-soft p-8 transition-all duration-300 hover:border-sky/50">
+          <div className="flex h-[380px] w-full max-w-[290px] shrink-0 flex-col rounded-[2rem] border border-line bg-paper-soft p-8 transition-all duration-300 hover:border-sky/50">
 
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky text-white">
               <ShoppingCart size={22} strokeWidth={2} />
@@ -91,7 +91,7 @@ export default function AboutUs() {
           </div>
 
           {/* CARD 2 */}
-          <div className="group relative h-[380px] w-[290px] shrink-0 overflow-hidden rounded-[2rem] border border-line">
+          <div className="group relative h-[380px] w-full max-w-[290px] shrink-0 overflow-hidden rounded-[2rem] border border-line">
             <img
               src="/about_waving_doctor.png"
               alt="Medicine reminder"
@@ -106,7 +106,7 @@ export default function AboutUs() {
           </div>
 
           {/* CARD 3 - HEALTH FEED */}
-          <div className="group relative h-[380px] w-[290px] shrink-0 overflow-hidden rounded-[2rem] bg-ink p-7 text-white transition-all duration-500 hover:bg-[#1a2c5a]">
+          <div className="group relative h-[380px] w-full max-w-[290px] shrink-0 overflow-hidden rounded-[2rem] bg-ink p-7 text-white transition-all duration-500 hover:bg-[#1a2c5a]">
 
             <div className="relative z-10">
               <h3 className="text-xl font-bold font-display">
@@ -177,7 +177,7 @@ export default function AboutUs() {
           </div>
 
           {/* CARD 4 */}
-          <div className="group relative h-[380px] w-[290px] shrink-0 overflow-hidden rounded-[2rem] border border-line">
+          <div className="group relative h-[380px] w-full max-w-[290px] shrink-0 overflow-hidden rounded-[2rem] border border-line">
             <img
               src="/about 1.png"
               alt="Digital Health Records"

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
@@ -20,7 +21,7 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <img src="/Logo_dr.png" alt="Dr.Jiva" className="h-14 w-auto" />
+            <Image src="/Logo_dr.png" alt="Dr.Jiva" width={180} height={56} priority className="h-14 w-auto" />
           </Link>
 
           {/* Desktop Menu */}

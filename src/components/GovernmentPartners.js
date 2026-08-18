@@ -17,12 +17,12 @@ export default function GovernmentPartners() {
         </div>
 
         {/* Scrollable Logos */}
-        <div className="overflow-x-auto scrollbar-hide">
-          <div className="flex min-w-max items-center justify-between gap-12 px-2">
-            <img src="/nha.png" alt="National Health Authority" className="h-34 w-auto flex-shrink-0 object-contain" />
-            <img src="/mohfw.png" alt="Ministry of Health & Family Welfare" className="h-16 w-auto flex-shrink-0 object-contain" />
-            <img src="/meity.png" alt="Ministry of Electronics & Information Technology" className="h-36 w-auto flex-shrink-0 object-contain" />
-            <img src="/india-gov.png" alt="India.gov.in" className="h-19 w-auto flex-shrink-0 object-contain" />
+        <div className="overflow-x-auto overscroll-x-contain scrollbar-hide" aria-label="Government partners">
+          <div className="flex min-w-max items-center justify-between gap-8 px-2 sm:gap-12">
+            <img src="/nha.png" alt="National Health Authority" className="h-24 w-auto flex-shrink-0 object-contain sm:h-32" />
+            <img src="/mohfw.png" alt="Ministry of Health & Family Welfare" className="h-23 w-auto flex-shrink-0 object-contain" />
+            <img src="/meity.png" alt="Ministry of Electronics & Information Technology" className="h-24 w-auto flex-shrink-0 object-contain sm:h-32" />
+            <img src="/india-gov.png" alt="India.gov.in" className="h-16 w-auto flex-shrink-0 object-contain" />
             <img src="/digital-india.png" alt="Digital India" className="h-20 w-auto flex-shrink-0 object-contain" />
           </div>
         </div>

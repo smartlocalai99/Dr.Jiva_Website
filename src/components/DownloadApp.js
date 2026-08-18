@@ -1,12 +1,12 @@
 export default function DownloadApp() {
   return (
-    <section className="px-6 py-12 sm:px-8 lg:px-10">
+    <section id="download-app" className="px-4 py-12 sm:px-8 lg:px-10">
       <div className="mx-auto ">
         {/* Main Two-Panel Card */}
         <div className="grid gap-4 lg:grid-cols-2">
 
           {/* Left Panel */}
-          <div className="flex min-h-[560px] flex-col justify-center rounded-[28px] bg-[#EEF5FB] px-8 py-12 sm:px-12 lg:px-16 lg:py-16">
+          <div className="flex min-h-[500px] flex-col justify-center rounded-[28px] bg-[#EEF5FB] px-6 py-10 sm:min-h-[560px] sm:px-12 sm:py-12 lg:px-16 lg:py-16">
             <span className="font-eyebrow inline-block text-xs font-semibold uppercase tracking-[0.18em] text-sky">
               Download the app
             </span>
@@ -25,7 +25,7 @@ export default function DownloadApp() {
             </p>
 
             {/* App Store Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
 
               <a
                 href="#"
@@ -42,7 +42,7 @@ export default function DownloadApp() {
               <a
                 href="#"
                 aria-label="Download Dr. Jiva from the App Store"
-                className="flex h-[58px] w-[170px] items-center justify-center"
+                className="flex h-11 w-[130px] items-center justify-center"
               >
                 <img
                   src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
@@ -57,7 +57,7 @@ export default function DownloadApp() {
 
           {/* Right Panel */}
 {/* Right Panel */}
-<div className="relative flex min-h-[560px] items-center justify-center overflow-hidden rounded-[28px] bg-sky px-8 py-10 sm:px-12 lg:px-16">
+<div className="relative flex min-h-[500px] items-center justify-center overflow-hidden rounded-[28px] bg-sky px-6 py-10 sm:min-h-[560px] sm:px-12 lg:px-16">
 
   {/* Decorative circles */}
   <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-white/10" />
@@ -78,7 +78,7 @@ export default function DownloadApp() {
     {/* Hand + Phone */}
     <div className="relative mt-4 flex flex-1 items-center justify-center">
 
-      <div className="relative translate-x-4 translate-y-10 h-[440px] w-auto sm:translate-x-5 sm:h-[465px] lg:translate-x-6 lg:h-[480px]">
+      <div className="relative translate-x-2 translate-y-8 h-[360px] w-auto sm:translate-x-5 sm:translate-y-10 sm:h-[465px] lg:translate-x-6 lg:h-[480px]">
 
         {/* Hand holding phone */}
         <img
@@ -91,7 +91,7 @@ export default function DownloadApp() {
         <img
           src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=DrJiva"
           alt="Dr. Jiva QR Code"
-          className="absolute left-[32%] top-[35%] z-20 h-[560px] w-[560px] rounded-md bg-white p-1 shadow-sm sm:h-[101px] sm:w-[101px]"
+          className="absolute left-[32%] top-[35%] z-20 h-[78px] w-[78px] rounded-md bg-white p-1 shadow-sm sm:h-[101px] sm:w-[101px]"
         />
 
       </div>
