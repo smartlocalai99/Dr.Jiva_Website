@@ -19,21 +19,21 @@ export default function ContactUs() {
             Contact Us
           </h2>
 
-          <p className="mx-auto mt-4 text-sm leading-7 text-charcoal/80">
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-charcoal/80">
             Have questions about Dr. Jiva? Get in touch with our team and
             learn more about our digital healthcare platform.
           </p>
         </div>
 
         {/* Contact Information */}
-        <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-10">
 
           {/* Email */}
           <a
             href="mailto:hello@drjiva.in"
             className="group flex flex-col items-center text-center"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky/10 text-sky transition-all duration-200 group-hover:bg-sky/15 group-hover:scale-110">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky/10 text-sky transition-all duration-200 group-hover:scale-110 group-hover:bg-sky/15">
               <Mail size={24} strokeWidth={2} />
             </div>
 
@@ -55,7 +55,7 @@ export default function ContactUs() {
             href="tel:+919876543210"
             className="group flex flex-col items-center text-center"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky/10 text-sky transition-all duration-200 group-hover:bg-sky/15 group-hover:scale-110">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky/10 text-sky transition-all duration-200 group-hover:scale-110 group-hover:bg-sky/15">
               <Phone size={24} strokeWidth={2} />
             </div>
 
@@ -79,7 +79,7 @@ export default function ContactUs() {
             rel="noopener noreferrer"
             className="group flex flex-col items-center text-center"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky/10 text-sky transition-all duration-200 group-hover:bg-sky/15 group-hover:scale-110">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky/10 text-sky transition-all duration-200 group-hover:scale-110 group-hover:bg-sky/15">
               <MessageCircle size={24} strokeWidth={2} />
             </div>
 
@@ -101,7 +101,7 @@ export default function ContactUs() {
             href="mailto:feedback@drjiva.in?subject=Dr.%20Jiva%20Feedback"
             className="group flex flex-col items-center text-center"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky/10 text-sky transition-all duration-200 group-hover:bg-sky/15 group-hover:scale-110">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky/10 text-sky transition-all duration-200 group-hover:scale-110 group-hover:bg-sky/15">
               <MessageSquareHeart size={24} strokeWidth={2} />
             </div>
 

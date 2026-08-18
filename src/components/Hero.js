@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Stethoscope,
   HeartPulse,
@@ -38,18 +40,18 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-x-clip bg-white pt-4 pb-3 lg:pt-6 lg:pb-0 border-b border-line"
+      className="relative overflow-x-clip border-b border-line bg-white pt-4 pb-3 lg:pt-6 lg:pb-0"
     >
       {/* ====================================================== */}
       {/* BACKGROUND SOFT BRAND GRADIENT GLOWS */}
       {/* ====================================================== */}
 
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_rgba(47,127,219,0.08)_0%,_rgba(255,255,255,0)_70%)] blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute left-0 top-0 h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle,_rgba(47,127,219,0.08)_0%,_rgba(255,255,255,0)_70%)] blur-3xl" />
 
-        <div className="absolute top-0 right-0 w-[700px] h-[650px] rounded-full bg-[radial-gradient(circle,_rgba(20,34,74,0.03)_0%,_rgba(255,255,255,0)_80%)] blur-2xl" />
+        <div className="absolute right-0 top-0 h-[650px] w-[700px] rounded-full bg-[radial-gradient(circle,_rgba(20,34,74,0.03)_0%,_rgba(255,255,255,0)_80%)] blur-2xl" />
 
-        <div className="absolute top-10 right-24 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_rgba(47,127,219,0.05)_0%,_rgba(255,255,255,0)_70%)] blur-3xl" />
+        <div className="absolute right-24 top-10 h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,_rgba(47,127,219,0.05)_0%,_rgba(255,255,255,0)_70%)] blur-3xl" />
       </div>
 
       {/* ====================================================== */}
@@ -58,28 +60,26 @@ export default function Hero() {
 
       <div className="w-full px-6 lg:px-10 xl:px-14">
         <div className="mx-auto grid max-w-[1500px] items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] xl:gap-4">
-
           {/* ================================================== */}
           {/* LEFT SIDE - CONTENT */}
           {/* ================================================== */}
 
           <div className="relative z-20 text-center sm:-translate-y-8 lg:text-left">
-
             {/* Tagline */}
             <span className="font-eyebrow inline-block text-xs font-semibold uppercase text-sky">
               Digital healthcare, made for India
             </span>
 
             {/* Heading */}
-            <h1 className="mt-7 text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl xl:text-7xl font-display">
+            <h1 className="mx-auto mt-6 max-w-[360px] font-display text-3xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:mx-0 lg:max-w-none lg:text-6xl xl:text-7xl">
               Your Health{" "}
 
               {/* Star */}
-              <span className="inline-flex align-middle items-center justify-center mx-1">
+              <span className="mx-1 inline-flex items-center justify-center align-middle">
                 <svg
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="hero-star-sparkle w-9 h-9 text-sky lg:w-[50px] lg:h-[50px]"
+                  className="hero-star-sparkle h-8 w-8 text-sky sm:h-9 sm:w-9 lg:h-[50px] lg:w-[50px]"
                 >
                   <path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" />
                 </svg>
@@ -92,9 +92,9 @@ export default function Hero() {
                 in One Place{" "}
 
                 {/* Animated Heart Pulse */}
-                <span className="inline-flex align-middle items-center justify-center mx-1">
+                <span className="mx-1 inline-flex items-center justify-center align-middle">
                   <HeartPulse
-                    className="hero-heart-pulse w-9 h-9 text-sky lg:w-[44px] lg:h-[44px]"
+                    className="hero-heart-pulse h-8 w-8 text-sky sm:h-9 sm:w-9 lg:h-[44px] lg:w-[44px]"
                     strokeWidth={2.2}
                   />
                 </span>
@@ -102,7 +102,7 @@ export default function Hero() {
             </h1>
 
             {/* Subtitle */}
-            <p className="mt-7 max-w-xl mx-auto lg:mx-0 text-lg leading-relaxed text-charcoal/70 font-body">
+            <p className="mx-auto mt-6 max-w-[340px] font-body text-base leading-relaxed text-charcoal/70 sm:text-lg lg:mx-0">
               Manage medicines, save prescriptions and hospital documents,
               order medicines, discover medical camps, stay updated with
               health news, and keep your healthcare journey secure in one
@@ -113,59 +113,47 @@ export default function Hero() {
             {/* BUTTON + GOOGLE RATING */}
             {/* ================================================== */}
 
-            <div className="mt-9 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
-
+            <div className="mt-7 flex flex-col items-center justify-center gap-6 sm:mt-9 sm:flex-row lg:justify-start">
               {/* Get App Button */}
-             <button
-  className="min-h-11 rounded-full bg-ink px-8 py-3.5 text-sm font-semibold text-white hover:bg-ink-soft shadow-md transition-all duration-200 whitespace-nowrap"
->
-  Get the App
-</button>
+              <button className="min-h-11 whitespace-nowrap rounded-full bg-ink px-8 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-ink-soft">
+                Get the App
+              </button>
 
-              {/* ================================================== */}
-              {/* GOOGLE RATING */}
-              {/* ================================================== */}
-
-              <div className="relative flex items-center min-h-[60px]">
-
+              {/* Google Rating */}
+              <div className="relative flex min-h-[60px] items-center">
                 {/* Review Images */}
-                <div className="flex items-center shrink-0">
-
+                <div className="flex shrink-0 items-center">
                   <Image
-                    src="/review-1.jpg"
+                    src="/review-1.png"
                     alt="Patient"
                     width={36}
                     height={36}
-                    className="w-9 h-9 rounded-full object-cover border-2 border-white shadow-sm"
+                    className="h-8 w-8 rounded-full border-2 border-white object-cover shadow-sm sm:h-9 sm:w-9"
                   />
 
                   <Image
-                    src="/review-2.jpg"
+                    src="/review-2.png"
                     alt="Patient"
                     width={36}
                     height={36}
-                    className="-ml-2 w-9 h-9 rounded-full object-cover border-2 border-white shadow-sm"
+                    className="-ml-2 h-8 w-8 rounded-full border-2 border-white object-cover shadow-sm sm:h-9 sm:w-9"
                   />
 
                   <Image
-                    src="/review-3.jpg"
+                    src="/review-3.png"
                     alt="Patient"
                     width={36}
                     height={36}
-                    className="-ml-2 w-9 h-9 rounded-full object-cover border-2 border-white shadow-sm"
+                    className="-ml-2 h-8 w-8 rounded-full border-2 border-white object-cover shadow-sm sm:h-9 sm:w-9"
                   />
-
                 </div>
 
                 {/* Google Rating Content */}
                 <div className="ml-3 flex flex-col">
-
                   {/* Google + Stars */}
                   <div className="flex items-center gap-1.5">
-
-                    {/* Exact Google G Logo */}
                     <svg
-                      className="w-[20px] h-[20px] shrink-0"
+                      className="h-[20px] w-[20px] shrink-0"
                       viewBox="0 0 48 48"
                       aria-label="Google"
                     >
@@ -197,23 +185,21 @@ export default function Hero() {
                           key={star}
                           viewBox="0 0 24 24"
                           fill="#FBBC04"
-                          className="w-[17px] h-[17px]"
+                          className="h-[17px] w-[17px]"
                         >
                           <path d="M12 2.5l2.9 5.88 6.49.94-4.7 4.58 1.11 6.46L12 17.3l-5.8 3.06 1.11-6.46-4.7-4.58 6.49-.94L12 2.5z" />
                         </svg>
                       ))}
                     </div>
-
                   </div>
 
                   {/* Rating Text */}
-                  <span className="mt-1 text-[12px] sm:text-[13px] leading-tight text-charcoal/80 whitespace-nowrap">
+                  <span className="mt-1 whitespace-nowrap text-[11px] leading-tight text-charcoal/80 sm:text-[13px]">
                     <strong className="font-semibold text-charcoal">
                       4.9
                     </strong>{" "}
                     average rating from 100+ patients
                   </span>
-
                 </div>
               </div>
             </div>
@@ -223,82 +209,65 @@ export default function Hero() {
           {/* RIGHT SIDE - PHONE + ORBITS */}
           {/* ================================================== */}
 
-          <div className="hero-phone-group relative flex min-h-[620px] lg:min-h-[700px] items-center justify-center overflow-hidden">
-
+          <div className="hero-phone-group relative flex min-h-[500px] items-center justify-center overflow-hidden sm:min-h-[620px] lg:min-h-[700px]">
             {/* ================================================== */}
             {/* ORBIT BACKGROUND */}
             {/* ================================================== */}
 
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-
+            <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
               {/* Soft center glow */}
-              <div className="absolute w-[480px] h-[480px] rounded-full bg-sky/5 blur-3xl" />
+              <div className="absolute h-[400px] w-[400px] rounded-full bg-sky/5 blur-3xl sm:h-[480px] sm:w-[480px]" />
 
               {/* Circle 1 */}
-              <div className="absolute w-[320px] h-[320px] rounded-full border border-sky/20">
+              <div className="absolute h-[260px] w-[260px] rounded-full border border-sky/20 sm:h-[320px] sm:w-[320px]">
                 <div className="orbit-ring orbit-clockwise-1 absolute inset-0 rounded-full">
                   <div className="absolute left-1/2 -top-7 -translate-x-1/2">
-                    <div className="orbit-icon-counter-1 flex h-14 w-14 items-center justify-center rounded-full bg-white border border-sky/20 text-sky shadow-[0_0_20px_rgba(47,127,219,0.25)]">
-                      <Stethoscope
-                        size={25}
-                        strokeWidth={2.2}
-                      />
+                    <div className="orbit-icon-counter-1 flex h-12 w-12 items-center justify-center rounded-full border border-sky/20 bg-white text-sky shadow-[0_0_20px_rgba(47,127,219,0.25)] sm:h-14 sm:w-14">
+                      <Stethoscope size={23} strokeWidth={2.2} />
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Circle 2 */}
-              <div className="absolute w-[410px] h-[410px] rounded-full border border-sky/20">
+              <div className="absolute h-[320px] w-[320px] rounded-full border border-sky/20 sm:h-[410px] sm:w-[410px]">
                 <div className="orbit-ring orbit-counter-1 absolute inset-0 rounded-full">
                   <div className="absolute left-1/2 -top-7 -translate-x-1/2">
-                    <div className="orbit-icon-counter-2 flex h-14 w-14 items-center justify-center rounded-full bg-white border border-sky/20 text-sky shadow-[0_0_22px_rgba(47,127,219,0.30)]">
-                      <HeartPulse
-                        size={25}
-                        strokeWidth={2.2}
-                      />
+                    <div className="orbit-icon-counter-2 flex h-12 w-12 items-center justify-center rounded-full border border-sky/20 bg-white text-sky shadow-[0_0_22px_rgba(47,127,219,0.30)] sm:h-14 sm:w-14">
+                      <HeartPulse size={23} strokeWidth={2.2} />
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Circle 3 */}
-              <div className="absolute w-[500px] h-[500px] rounded-full border border-sky/20">
+              <div className="absolute h-[380px] w-[380px] rounded-full border border-sky/20 sm:h-[500px] sm:w-[500px]">
                 <div className="orbit-ring orbit-clockwise-2 absolute inset-0 rounded-full">
                   <div className="absolute left-1/2 -top-7 -translate-x-1/2">
-                    <div className="orbit-icon-counter-3 flex h-14 w-14 items-center justify-center rounded-full bg-white border border-sky/20 text-sky shadow-[0_0_24px_rgba(47,127,219,0.30)]">
-                      <Pill
-                        size={25}
-                        strokeWidth={2.2}
-                      />
+                    <div className="orbit-icon-counter-3 flex h-12 w-12 items-center justify-center rounded-full border border-sky/20 bg-white text-sky shadow-[0_0_24px_rgba(47,127,219,0.30)] sm:h-14 sm:w-14">
+                      <Pill size={23} strokeWidth={2.2} />
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Circle 4 */}
-              <div className="absolute w-[580px] h-[580px] rounded-full border border-sky/15">
+              <div className="absolute h-[440px] w-[440px] rounded-full border border-sky/15 sm:h-[580px] sm:w-[580px]">
                 <div className="orbit-ring orbit-counter-2 absolute inset-0 rounded-full">
                   <div className="absolute left-1/2 -top-7 -translate-x-1/2">
-                    <div className="orbit-icon-counter-4 flex h-14 w-14 items-center justify-center rounded-full bg-white border border-sky/20 text-sky shadow-[0_0_26px_rgba(47,127,219,0.35)]">
-                      <ShoppingCart
-                        size={25}
-                        strokeWidth={2.2}
-                      />
+                    <div className="orbit-icon-counter-4 flex h-12 w-12 items-center justify-center rounded-full border border-sky/20 bg-white text-sky shadow-[0_0_26px_rgba(47,127,219,0.35)] sm:h-14 sm:w-14">
+                      <ShoppingCart size={23} strokeWidth={2.2} />
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Circle 5 */}
-              <div className="absolute w-[660px] h-[660px] rounded-full border border-sky/15">
+              <div className="absolute h-[500px] w-[500px] rounded-full border border-sky/15 sm:h-[660px] sm:w-[660px]">
                 <div className="orbit-ring orbit-clockwise-3 absolute inset-0 rounded-full">
                   <div className="absolute left-1/2 -top-7 -translate-x-1/2">
-                    <div className="orbit-icon-counter-5 flex h-14 w-14 items-center justify-center rounded-full bg-white border border-sky/20 text-sky shadow-[0_0_28px_rgba(47,127,219,0.35)]">
-                      <Phone
-                        size={25}
-                        strokeWidth={2.2}
-                      />
+                    <div className="orbit-icon-counter-5 flex h-12 w-12 items-center justify-center rounded-full border border-sky/20 bg-white text-sky shadow-[0_0_28px_rgba(47,127,219,0.35)] sm:h-14 sm:w-14">
+                      <Phone size={23} strokeWidth={2.2} />
                     </div>
                   </div>
                 </div>
@@ -310,22 +279,25 @@ export default function Hero() {
             {/* ================================================== */}
 
             <div className="relative z-10 flex items-center justify-center">
+              <div className="main-phone relative aspect-[9/18.5] w-[215px] shrink-0 overflow-hidden rounded-[3rem] border-[10px] border-black bg-black shadow-2xl sm:w-[260px] lg:w-[270px]">
+                {/* NOTCH */}
+                <div className="absolute left-1/2 top-0 z-30 h-6 w-32 -translate-x-1/2 rounded-b-2xl bg-black" />
 
-              <div className="main-phone relative w-[235px] sm:w-[260px] lg:w-[270px] aspect-[9/18.5] rounded-[3rem] bg-black border-[10px] border-black shadow-2xl shrink-0 overflow-hidden">
-
-                {/* Notch */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl z-30" />
-
-                {/* YOUR DR JIVA APP IMAGE */}
-                <Image
-                  src="/app-screen.png"
-                  alt="Dr Jiva app screen"
-                  fill
-                  priority
-                  sizes="(max-width: 639px) 68vw, (max-width: 1023px) 260px, 270px"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-
+                {/* APP VIDEO */}
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  controls
+                  poster="/app-screen.png"
+                  aria-label="Dr Jiva app preview"
+                  className="absolute inset-0 z-10 h-full w-full object-cover"
+                >
+                  <source src="/app-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
@@ -336,15 +308,17 @@ export default function Hero() {
       {/* HOSPITAL LOGO CONTINUOUS INFINITE TICKER */}
       {/* ====================================================== */}
 
-      <div className="mt-12 lg:mt-6 w-full overflow-hidden bg-white py-1">
+      <div className="mt-12 w-full overflow-hidden bg-white py-1 lg:mt-6">
         <div className="hospital-ticker-wrapper">
+          {/* ================================================== */}
+          {/* TRACK 1 */}
+          {/* ================================================== */}
 
-          {/* GROUP 1 */}
           <div className="hospital-ticker-track">
             {hospitals.map((hospital, index) => (
               <div
-                className="hospital-logo-item"
-                key={`first-${index}`}
+                className="hospital-logo-item shrink-0"
+                key={`track-1-${index}`}
               >
                 <Image
                   src={hospital.src}
@@ -352,65 +326,77 @@ export default function Hero() {
                   width={160}
                   height={100}
                   sizes="160px"
+                  className="h-auto w-[160px] object-contain"
                 />
               </div>
             ))}
           </div>
 
-          {/* GROUP 2 */}
-          <div className="hospital-ticker-track">
+          {/* ================================================== */}
+          {/* TRACK 2 - EXACT DUPLICATE */}
+          {/* ================================================== */}
+
+          <div className="hospital-ticker-track" aria-hidden="true">
             {hospitals.map((hospital, index) => (
               <div
-                className="hospital-logo-item"
-                key={`second-${index}`}
+                className="hospital-logo-item shrink-0"
+                key={`track-2-${index}`}
               >
                 <Image
                   src={hospital.src}
-                  alt={hospital.alt}
+                  alt=""
                   width={160}
                   height={100}
                   sizes="160px"
+                  className="h-auto w-[160px] object-contain"
                 />
               </div>
             ))}
           </div>
 
-          {/* GROUP 3 */}
-          <div className="hospital-ticker-track">
+          {/* ================================================== */}
+          {/* TRACK 3 - EXTRA DUPLICATE FOR MOBILE */}
+          {/* ================================================== */}
+
+          <div className="hospital-ticker-track" aria-hidden="true">
             {hospitals.map((hospital, index) => (
               <div
-                className="hospital-logo-item"
-                key={`third-${index}`}
+                className="hospital-logo-item shrink-0"
+                key={`track-3-${index}`}
               >
                 <Image
                   src={hospital.src}
-                  alt={hospital.alt}
+                  alt=""
                   width={160}
                   height={100}
                   sizes="160px"
+                  className="h-auto w-[160px] object-contain"
                 />
               </div>
             ))}
           </div>
 
-          {/* GROUP 4 */}
-          <div className="hospital-ticker-track">
+          {/* ================================================== */}
+          {/* TRACK 4 */}
+          {/* ================================================== */}
+
+          <div className="hospital-ticker-track" aria-hidden="true">
             {hospitals.map((hospital, index) => (
               <div
-                className="hospital-logo-item"
-                key={`fourth-${index}`}
+                className="hospital-logo-item shrink-0"
+                key={`track-4-${index}`}
               >
                 <Image
                   src={hospital.src}
-                  alt={hospital.alt}
+                  alt=""
                   width={160}
                   height={100}
                   sizes="160px"
+                  className="h-auto w-[160px] object-contain"
                 />
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

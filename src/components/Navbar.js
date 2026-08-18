@@ -21,7 +21,13 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/Logo_dr.png" alt="Dr.Jiva" width={180} height={56} priority className="h-14 w-auto" />
+            <Image
+  src="/Logo_dr.png"
+  width={150}
+  height={50}
+  className="h-auto w-18"
+  alt="Dr. Jiva"
+/>
           </Link>
 
           {/* Desktop Menu */}
