@@ -80,7 +80,7 @@ export default function DownloadApp() {
     {/* Hand + Phone */}
     <div className="relative mt-4 flex flex-1 items-center justify-center">
 
-      <div className="relative h-[360px] translate-x-2 translate-y-8 sm:h-[465px] sm:translate-x-5 sm:translate-y-10 lg:h-[480px] lg:translate-x-6">
+      <div className="relative h-[390px] translate-x-2 translate-y-16 sm:h-[465px] sm:translate-x-5 sm:translate-y-10 lg:h-[480px] lg:translate-x-6">
 
         {/* Hand holding phone */}
         <Image
@@ -88,6 +88,7 @@ export default function DownloadApp() {
           alt="Dr. Jiva app"
           width={520}
           height={620}
+          loading="eager"
           sizes="(max-width: 639px) 300px, (max-width: 1023px) 390px, 410px"
           className="h-full w-auto object-contain"
         />
