@@ -59,7 +59,7 @@ export default function DownloadApp() {
 
           {/* Right Panel */}
 {/* Right Panel */}
-<div className="relative flex min-h-[500px] items-center justify-center overflow-hidden rounded-[28px] bg-sky px-6 py-10 sm:min-h-[560px] sm:px-12 lg:px-16">
+<div className="relative flex min-h-[470px] items-center justify-center overflow-hidden rounded-[28px] bg-sky px-6 pb-0 pt-10 sm:min-h-[560px] sm:px-12 sm:py-10 lg:px-16">
 
   {/* Decorative circles */}
   <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-white/10" />
@@ -78,9 +78,9 @@ export default function DownloadApp() {
     </p>
 
     {/* Hand + Phone */}
-    <div className="relative mt-4 flex flex-1 items-center justify-center">
+    <div className="relative mt-4 flex flex-1 items-end justify-center sm:items-center">
 
-      <div className="relative h-[390px] translate-x-2 translate-y-16 sm:h-[465px] sm:translate-x-5 sm:translate-y-10 lg:h-[480px] lg:translate-x-6">
+      <div className="relative h-[350px] translate-x-2 sm:h-[465px] sm:translate-x-5 sm:translate-y-10 lg:h-[480px] lg:translate-x-6">
 
         {/* Hand holding phone */}
         <Image
@@ -91,22 +91,6 @@ export default function DownloadApp() {
           loading="eager"
           sizes="(max-width: 639px) 300px, (max-width: 1023px) 390px, 410px"
           className="h-full w-auto object-contain"
-        />
-
-        {/* Covers the decorative scanner baked into the phone artwork. */}
-        <div
-          aria-hidden="true"
-          className="absolute left-[30%] top-[35%] z-10 aspect-square w-[24%] rounded-md bg-white"
-        />
-
-        {/* Local QR asset remains the only visible scanner code. */}
-        <Image
-          src="/dr-jiva-qr.svg"
-          alt="Dr. Jiva QR Code"
-          width={200}
-          height={200}
-          unoptimized
-          className="absolute left-[32%] top-[37%] z-20 h-auto w-[20%] rounded-sm bg-white p-1 shadow-sm"
         />
 
       </div>
