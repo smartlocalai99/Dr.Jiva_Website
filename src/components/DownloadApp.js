@@ -80,7 +80,7 @@ export default function DownloadApp() {
     {/* Hand + Phone */}
     <div className="relative mt-4 flex flex-1 items-end justify-center sm:items-center">
 
-      <div className="relative h-[350px] translate-x-2 sm:h-[465px] sm:translate-x-5 sm:translate-y-10 lg:h-[480px] lg:translate-x-6">
+      <div className="relative h-[350px] translate-x-2 translate-y-10 sm:h-[465px] sm:translate-x-5 sm:translate-y-10 lg:h-[480px] lg:translate-x-6">
 
         {/* Hand holding phone */}
         <Image
