@@ -12,7 +12,7 @@ import Image from "next/image";
 export default function Hero() {
   const hospitals = [
     {
-      src: "/asian.png",
+      src: "/Asian.png",
       alt: "Asian Hospital",
     },
     {
