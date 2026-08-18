@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="bg-ink text-paper">
       {/* Main Footer */}
       <div className="mx-auto px-6 pb-12 pt-20 lg:px-8">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
-          
+        <div className="grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-4 lg:gap-12">
+
           {/* Company Details */}
           <div className="col-span-2 lg:col-span-1">
             <a href="#home" className="inline-flex items-center gap-3">
@@ -140,57 +140,68 @@ export default function Footer() {
 
           {/* Get in Touch */}
           <div className="col-span-2 lg:col-span-1">
-            <h3 className="font-eyebrow text-xs font-semibold uppercase text-paper/50">
-              Get in Touch
-            </h3>
 
-            <div className="mt-5 space-y-3 text-paper/70">
-              <p>India</p>
+            {/* Mobile: Two Columns | Desktop: Normal */}
+            <div className="grid grid-cols-2 gap-5 lg:block">
 
-              <a
-                href="mailto:hello@drjiva.in"
-                className="block hover:text-paper"
-              >
-                hello@drjiva.in
-              </a>
+              {/* Get in Touch */}
+              <div>
+                <h3 className="font-eyebrow text-xs font-semibold uppercase text-paper/50">
+                  Get in Touch
+                </h3>
 
-              <a
-                href="tel:+919876543210"
-                className="block hover:text-paper"
-              >
-                +91 9876543210
-              </a>
-            </div>
+                <div className="mt-5 space-y-3 text-paper/70">
+                  <p>India</p>
 
-            {/* Connect With Us */}
-            <h3 className="font-eyebrow mt-8 text-center text-xs font-semibold uppercase text-paper/50 lg:text-left">
-              Connect With Us
-            </h3>
+                  <a
+                    href="mailto:hello@drjiva.in"
+                    className="block break-words hover:text-paper"
+                  >
+                    hello@drjiva.in
+                  </a>
 
-            <div className="mt-5 flex items-center justify-center gap-3 lg:justify-start">
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink"
-              >
-                <FaFacebookF size={17} />
-              </a>
+                  <a
+                    href="tel:+919876543210"
+                    className="block hover:text-paper"
+                  >
+                    +91 9876543210
+                  </a>
+                </div>
+              </div>
 
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink"
-              >
-                <FaInstagram size={19} />
-              </a>
+              {/* Connect With Us */}
+              <div className="pt-8 lg:mt-8 lg:pt-0">
+                <h3 className="font-eyebrow text-xs font-semibold uppercase text-paper/50">
+                  Connect With Us
+                </h3>
 
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink"
-              >
-                <FaLinkedinIn size={17} />
-              </a>
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  <a
+                    href="#"
+                    aria-label="Facebook"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink"
+                  >
+                    <FaFacebookF size={17} />
+                  </a>
+
+                  <a
+                    href="#"
+                    aria-label="Instagram"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink"
+                  >
+                    <FaInstagram size={19} />
+                  </a>
+
+                  <a
+                    href="#"
+                    aria-label="LinkedIn"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink"
+                  >
+                    <FaLinkedinIn size={17} />
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -199,14 +210,14 @@ export default function Footer() {
       {/* Bottom Footer */}
       <div>
         <div className="mx-auto flex flex-col gap-5 px-6 py-7 text-sm text-paper/60 md:flex-row md:items-center md:justify-between lg:px-8">
-          
-          {/* Only copyright centered on mobile */}
+
+          {/* Copyright */}
           <p className="w-full text-center md:w-auto md:text-left">
             © 2026 Dr. Jiva. All rights reserved.
           </p>
 
-          {/* Policy links */}
-          <div className="flex flex-wrap items-center justify-start gap-x-6 gap-y-3 md:justify-end">
+          {/* Policy Links */}
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 md:justify-end">
             <a href="#" className="hover:text-paper">
               Privacy Policy
             </a>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function DownloadApp() {
   return (
     <section id="download-app" className="px-4 py-12 sm:px-8 lg:px-10">
@@ -78,20 +80,26 @@ export default function DownloadApp() {
     {/* Hand + Phone */}
     <div className="relative mt-4 flex flex-1 items-center justify-center">
 
-      <div className="relative translate-x-2 translate-y-8 h-[360px] w-auto sm:translate-x-5 sm:translate-y-10 sm:h-[465px] lg:translate-x-6 lg:h-[480px]">
+      <div className="relative h-[360px] translate-x-2 translate-y-8 sm:h-[465px] sm:translate-x-5 sm:translate-y-10 lg:h-[480px] lg:translate-x-6">
 
         {/* Hand holding phone */}
-        <img
+        <Image
           src="/hand-phone.png"
           alt="Dr. Jiva app"
+          width={520}
+          height={620}
+          sizes="(max-width: 639px) 300px, (max-width: 1023px) 390px, 410px"
           className="h-full w-auto object-contain"
         />
 
-        {/* QR Code positioned inside the phone's scanner frame */}
-        <img
-          src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=DrJiva"
+        {/* Local QR asset keeps the scanner code visible on every screen size. */}
+        <Image
+          src="/dr-jiva-qr.svg"
           alt="Dr. Jiva QR Code"
-          className="absolute left-[32%] top-[35%] z-20 h-[78px] w-[78px] rounded-md bg-white p-1 shadow-sm sm:h-[101px] sm:w-[101px]"
+          width={200}
+          height={200}
+          unoptimized
+          className="absolute left-[32%] top-[35%] z-20 h-auto w-[22%] rounded-sm bg-white p-1 shadow-sm"
         />
 
       </div>
