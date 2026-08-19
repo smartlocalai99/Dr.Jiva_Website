@@ -27,29 +27,29 @@ export default function DownloadApp() {
             </p>
 
             {/* App Store Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
+            <div className="mt-8 flex flex-nowrap items-center gap-2 sm:gap-4">
 
               <a
                 href="#"
                 aria-label="Download Dr. Jiva from Google Play"
-                className="flex h-[58px] w-[170px] items-center justify-center"
+                className="flex h-[52px] w-[150px] shrink-0 items-center justify-center sm:h-[58px] sm:w-[170px]"
               >
                 <img
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                   alt="Get it on Google Play"
-                  className="h-[59px] w-[170px]"
+                  className="h-[52px] w-[150px] sm:h-[59px] sm:w-[170px]"
                 />
               </a>
 
               <a
                 href="#"
                 aria-label="Download Dr. Jiva from the App Store"
-                className="flex h-11 w-[130px] items-center justify-center"
+                className="flex h-10 w-[120px] shrink-0 items-center justify-center sm:h-11 sm:w-[130px]"
               >
                 <img
                   src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                   alt="Download on the App Store"
-                  className="h-[39px] w-[130px]"
+                  className="h-[36px] w-[120px] sm:h-[39px] sm:w-[130px]"
                 />
               </a>
 
@@ -58,47 +58,46 @@ export default function DownloadApp() {
 
 
           {/* Right Panel */}
-{/* Right Panel */}
-<div className="relative flex min-h-[470px] items-center justify-center overflow-hidden rounded-[28px] bg-sky px-6 pb-0 pt-10 sm:min-h-[560px] sm:px-12 sm:py-10 lg:px-16">
+          <div className="relative flex min-h-[470px] items-center justify-center overflow-hidden rounded-[28px] bg-sky px-6 pb-0 pt-10 sm:min-h-[560px] sm:px-12 sm:py-10 lg:px-16">
 
-  {/* Decorative circles */}
-  <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-white/10" />
-  <div className="absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-white/10" />
+            {/* Decorative circles */}
+            <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-white/10" />
+            <div className="absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-white/10" />
 
-  {/* Content */}
-  <div className="relative z-10 flex h-full w-full flex-col items-center">
+            {/* Content */}
+            <div className="relative z-10 flex h-full w-full flex-col items-center">
 
-    {/* Heading */}
-    <h3 className="text-center text-2xl font-bold leading-tight text-white sm:text-3xl">
-      Scan the QR Code
-    </h3>
+              {/* Heading */}
+              <h3 className="text-center text-2xl font-bold leading-tight text-white sm:text-3xl">
+                Scan the QR Code
+              </h3>
 
-    <p className="mt-2 text-center text-lg font-bold text-white/90 sm:text-xl">
-      Download the App
-    </p>
+              <p className="mt-2 text-center text-lg font-bold text-white/90 sm:text-xl">
+                Download the App
+              </p>
 
-    {/* Hand + Phone */}
-    <div className="relative mt-4 flex flex-1 items-end justify-center sm:items-center">
+              {/* Hand + Phone */}
+              <div className="relative mt-4 flex flex-1 items-end justify-center sm:items-center">
 
-      <div className="relative h-[350px] translate-x-2 translate-y-10 sm:h-[465px] sm:translate-x-5 sm:translate-y-10 lg:h-[480px] lg:translate-x-6">
+                <div className="relative h-[350px] translate-x-2 translate-y-10 sm:h-[465px] sm:translate-x-5 sm:translate-y-10 lg:h-[480px] lg:translate-x-6">
 
-        {/* Hand holding phone */}
-        <Image
-          src="/hand-phone.png"
-          alt="Dr. Jiva app"
-          width={520}
-          height={620}
-          loading="eager"
-          sizes="(max-width: 639px) 300px, (max-width: 1023px) 390px, 410px"
-          className="h-full w-auto object-contain"
-        />
+                  {/* Hand holding phone */}
+                  <Image
+                    src="/hand-phone.png"
+                    alt="Dr. Jiva app"
+                    width={520}
+                    height={620}
+                    loading="eager"
+                    sizes="(max-width: 639px) 300px, (max-width: 1023px) 390px, 410px"
+                    className="h-full w-auto object-contain"
+                  />
 
-      </div>
+                </div>
 
-    </div>
+              </div>
 
-  </div>
-</div>
+            </div>
+          </div>
 
         </div>
       </div>

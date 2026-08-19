@@ -33,11 +33,11 @@ export default function Footer() {
             </p>
 
             {/* App Download Buttons */}
-            <div className="mt-6 flex flex-wrap items-center gap-2">
+            <div className="mt-6 flex items-center gap-2">
               <a
                 href="#"
                 aria-label="Download Dr. Jiva from Google Play"
-                className="flex h-[58px] w-[170px] items-center justify-center"
+                className="flex h-[58px] w-[170px] shrink-0 items-center justify-center"
               >
                 <img
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
@@ -49,7 +49,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Download Dr. Jiva from the App Store"
-                className="flex h-[58px] w-[170px] items-center justify-center"
+                className="flex h-[58px] w-[130px] shrink-0 items-center justify-center"
               >
                 <img
                   src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
@@ -178,6 +178,8 @@ export default function Footer() {
                 <div className="mt-5 flex flex-wrap items-center gap-3">
                   <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Facebook"
                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink"
                   >
@@ -186,6 +188,8 @@ export default function Footer() {
 
                   <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Instagram"
                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink"
                   >
@@ -194,6 +198,8 @@ export default function Footer() {
 
                   <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="LinkedIn"
                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink"
                   >

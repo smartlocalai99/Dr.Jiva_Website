@@ -66,28 +66,13 @@ export default function Hero() {
             <h1 className="mx-auto mt-6 max-w-[360px] font-display text-3xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:mx-0 lg:max-w-none lg:text-6xl xl:text-7xl">
               Your Health{" "}
 
-              <span className="mx-1 inline-flex items-center justify-center align-middle">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="hero-star-sparkle h-8 w-8 text-sky sm:h-9 sm:w-9 lg:h-[50px] lg:w-[50px]"
-                >
-                  <path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" />
-                </svg>
-              </span>{" "}
-
+             
               Everything
 
               <span className="block sm:inline">
                 {" "}
                 in One Place{" "}
 
-                <span className="mx-1 inline-flex items-center justify-center align-middle">
-                  <HeartPulse
-                    className="hero-heart-pulse h-8 w-8 text-sky sm:h-9 sm:w-9 lg:h-[44px] lg:w-[44px]"
-                    strokeWidth={2.2}
-                  />
-                </span>
               </span>
             </h1>
 
