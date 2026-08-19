@@ -33,12 +33,12 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section>
-      <div className="mx-auto  px-6 py-20 lg:px-8">
+    <section id="why" className="scroll-mt-20">
+      <div className="mx-auto px-6 py-20 lg:px-8">
 
         {/* Section Header */}
         <div className="grid gap-8 lg:grid-cols-2 lg:items-end">
-          
+
           {/* Left */}
           <div>
             <p className="font-eyebrow text-sm font-semibold uppercase tracking-wider text-ink/60">
@@ -55,8 +55,8 @@ export default function WhyChooseUs() {
           <div className="lg:pb-5">
             <p className="max-w-xl text-base leading-7 text-charcoal/80 lg:ml-auto">
               Dr. Jiva simplifies healthcare with medicine reminders,
-              online medicine ordering, secure digital records, 
-               and a connected healthcare experience.
+              online medicine ordering, secure digital records,
+              and a connected healthcare experience.
             </p>
           </div>
         </div>
@@ -68,10 +68,9 @@ export default function WhyChooseUs() {
 
             return (
               <div
-  key={item.title}
-  className="group relative rounded-3xl border border-line bg-white p-7 transition-all duration-300 hover:border-sky/40 hover:shadow-lg"
->
-
+                key={item.title}
+                className="group relative rounded-3xl border border-line bg-white p-7 transition-all duration-300 hover:border-sky/40 hover:shadow-lg"
+              >
                 {/* Icon */}
                 <div className="flex h-10 w-10 items-center justify-start">
                   <Icon
