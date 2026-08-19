@@ -41,10 +41,6 @@ export default function ContactUs() {
               Email Address
             </h3>
 
-            <p className="mt-2 text-sm leading-6 text-charcoal/70">
-              hello@drjiva.in
-            </p>
-
             <p className="text-sm leading-6 text-charcoal/70">
               support@drjiva.in
             </p>
@@ -64,7 +60,7 @@ export default function ContactUs() {
             </h3>
 
             <p className="mt-2 text-sm leading-6 text-charcoal/70">
-              +91 9876543210
+              +91 9866531011
             </p>
 
             <p className="text-sm leading-6 text-charcoal/70">
@@ -74,7 +70,7 @@ export default function ContactUs() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/919866531011"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex flex-col items-center text-center"

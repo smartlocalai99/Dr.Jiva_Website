@@ -176,18 +176,18 @@ export default function Footer() {
                 </h3>
 
                 <div className="mt-5 flex flex-wrap items-center gap-3">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-paper/10 text-paper hover:bg-paper hover:text-ink"
-                  >
-                    <FaFacebookF size={17} />
-                  </a>
 
+                  {/* Facebook */}
+                  <div
+  aria-label="Facebook"
+  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-paper/10 text-paper"
+>
+  <FaFacebookF size={17} />
+</div>
+
+                  {/* Instagram */}
                   <a
-                    href="#"
+                    href="https://www.instagram.com/smartlocal_ai/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -196,8 +196,9 @@ export default function Footer() {
                     <FaInstagram size={19} />
                   </a>
 
+                  {/* LinkedIn */}
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/133385965/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -205,6 +206,7 @@ export default function Footer() {
                   >
                     <FaLinkedinIn size={17} />
                   </a>
+
                 </div>
               </div>
 
@@ -236,6 +238,7 @@ export default function Footer() {
               Cookie Policy
             </a>
           </div>
+
         </div>
       </div>
     </footer>
