@@ -157,14 +157,14 @@ export default function Footer() {
                     href="mailto:hello@drjiva.in"
                     className="block break-words hover:text-paper"
                   >
-                    hello@drjiva.in
+                    support@drjiva.in
                   </a>
 
                   <a
                     href="tel:+919876543210"
                     className="block hover:text-paper"
                   >
-                    +91 9876543210
+                    +91 9866531011
                   </a>
                 </div>
               </div>
