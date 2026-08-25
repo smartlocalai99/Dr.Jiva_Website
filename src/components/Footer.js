@@ -47,10 +47,12 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
-                aria-label="Download Dr. Jiva from the App Store"
-                className="flex h-[58px] w-[130px] shrink-0 items-center justify-center"
-              >
+  href="https://apps.apple.com/in/app/drjiva/id6795009333"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Download Dr. Jiva from the App Store"
+  className="flex h-[58px] w-[130px] shrink-0 items-center justify-center"
+>
                 <img
                   src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
                   alt="Download on the App Store"
