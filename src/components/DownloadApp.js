@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function DownloadApp() {
   return (
-    <section id="download-app" className="px-4 py-12 sm:px-8 lg:px-10">
+    <section id="download-app" className="px-4 py-2 sm:px-8 lg:px-10">
       <div className="mx-auto ">
         {/* Main Two-Panel Card */}
         <div className="grid gap-4 lg:grid-cols-2">
@@ -30,7 +30,7 @@ export default function DownloadApp() {
             <div className="mt-8 flex flex-nowrap items-center gap-2 sm:gap-4">
 
               <a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.drjiva.patient"
                 aria-label="Download Dr. Jiva from Google Play"
                 className="flex h-[52px] w-[150px] shrink-0 items-center justify-center sm:h-[58px] sm:w-[170px]"
               >
@@ -60,7 +60,7 @@ export default function DownloadApp() {
 
 
           {/* Right Panel */}
-          <div className="relative flex min-h-[470px] items-center justify-center overflow-hidden rounded-[28px] bg-sky px-6 pb-0 pt-10 sm:min-h-[560px] sm:px-12 sm:py-10 lg:px-16">
+          <div className="relative flex min-h-[470px] items-center justify-center overflow-hidden rounded-[28px] bg-sky px-6 pb-0 pt-10 sm:min-h-[560px] sm:px-12 sm:py-10 lg:px-11">
 
             {/* Decorative circles */}
             <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-white/10" />
@@ -106,3 +106,4 @@ export default function DownloadApp() {
     </section>
   );
 }
+

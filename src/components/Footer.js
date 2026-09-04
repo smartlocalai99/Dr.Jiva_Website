@@ -35,7 +35,7 @@ export default function Footer() {
             {/* App Download Buttons */}
             <div className="mt-6 flex items-center gap-2">
               <a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.drjiva.patient"
                 aria-label="Download Dr. Jiva from Google Play"
                 className="flex h-[58px] w-[170px] shrink-0 items-center justify-center"
               >
