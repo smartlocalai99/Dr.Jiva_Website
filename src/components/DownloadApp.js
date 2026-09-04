@@ -85,7 +85,7 @@ export default function DownloadApp() {
 
                   {/* Hand holding phone */}
                   <Image
-                    src="/hand-phone.png"
+                    src="/hand-image.png"
                     alt="Dr. Jiva app"
                     width={520}
                     height={620}
